@@ -20,7 +20,7 @@ pipeline {
         nodejs 'recent'
     }
     stages {
-        stage('Build') {
+        stage('ビルド') {
             environment {
                 // get git commit from Jenkins
                 GIT_COMMIT = sh(returnStdout: true, script: 'git rev-parse HEAD').trim()
@@ -36,14 +36,14 @@ pipeline {
             // post build section to use "publishBuildRecord" method to publish build record
             post {
                 success {
-                    publishBuildRecord gitBranch: "${GIT_BRANCH}", gitCommit: "${GIT_COMMIT}", gitRepo: "${GIT_REPO}", result:"SUCCESS"
+                    publishBuildRecord gitBranch: "${GIT_BRANCH}", gitCommit: "${GIT_COMMIT}", gitRepo: "${GIT_REPO}", result:"成功"
                 }
                 failure {
-                    publishBuildRecord gitBranch: "${GIT_BRANCH}", gitCommit: "${GIT_COMMIT}", gitRepo: "${GIT_REPO}", result:"FAIL"
+                    publishBuildRecord gitBranch: "${GIT_BRANCH}", gitCommit: "${GIT_COMMIT}", gitRepo: "${GIT_REPO}", result:"失敗"
                 }
             }
         }
-        stage('Unit Test and Code Coverage') {
+        stage('単体テストとコードカバレッジ') {
             steps {
                 sh 'grunt dev-test-cov --no-color -f'
             }
@@ -55,15 +55,15 @@ pipeline {
                 }
             }
         }
-        stage('Deploy to Staging') {
+        stage('ステージングにデプロイ') {
             steps {
                 // Push the Weather App to Bluemix, staging space
                 sh '''
-                        echo "CF Login..."
+                        echo "CF ログイン..."
                         cf api https://api.stage1.ng.bluemix.net
-                        cf login -u $IBM_CLOUD_DEVOPS_CREDS_USR -p $IBM_CLOUD_DEVOPS_CREDS_PSW -o $IBM_CLOUD_DEVOPS_ORG -s staging
+                        cf login -u $IBM_CLOUD_DEVOPS_CREDS_USR -p $IBM_CLOUD_DEVOPS_CREDS_PSW -o $IBM_CLOUD_DEVOPS_ORG -s ステージング
 
-                        echo "Deploying...."
+                        echo "デプロイ中...."
                         export CF_APP_NAME="staging-$IBM_CLOUD_DEVOPS_APP_NAME"
                         cf delete $CF_APP_NAME -f
                         cf push $CF_APP_NAME -n $CF_APP_NAME -m 64M -i 1
@@ -79,12 +79,12 @@ pipeline {
                 success {
                     publishDeployRecord environment: "STAGING", appUrl: "http://staging-${IBM_CLOUD_DEVOPS_APP_NAME}.mybluemix.net", result:"SUCCESS"
                     // use "notifyOTC" method to notify otc of stage status
-                    notifyOTC stageName: "Deploy to Staging", status: "SUCCESS"
+                    notifyOTC stageName: "ステージングにデプロイ", status: "成功"
                 }
                 failure {
                     publishDeployRecord environment: "STAGING", appUrl: "http://staging-${IBM_CLOUD_DEVOPS_APP_NAME}.mybluemix.net", result:"FAIL"
                     // use "notifyOTC" method to notify otc of stage status
-                    notifyOTC stageName: "Deploy to Staging", status: "FAILURE"
+                    notifyOTC stageName: "Deploy to Staging", status: "失敗"
                 }
             }
         }
@@ -103,22 +103,22 @@ pipeline {
                 }
             }
         }
-        stage('Gate') {
+        stage('ゲート') {
             steps {
                 // use "evaluateGate" method to leverage IBM Cloud DevOps gate
           //      evaluateGate policy: 'Weather App Policy', forceDecision: 'true'
           evaluateGate policy: '天気予報アプリポリシー①', forceDecision: 'true'
             }
         }
-        stage('Deploy to Prod') {
+        stage('実稼働にデプロイ') {
             steps {
                 // Push the Weather App to Bluemix, production space
                 sh '''
-                        echo "CF Login..."
+                        echo "CF ログイン..."
                         cf api https://api.stage1.ng.bluemix.net
-                        cf login -u $IBM_CLOUD_DEVOPS_CREDS_USR -p $IBM_CLOUD_DEVOPS_CREDS_PSW -o $IBM_CLOUD_DEVOPS_ORG -s production
+                        cf login -u $IBM_CLOUD_DEVOPS_CREDS_USR -p $IBM_CLOUD_DEVOPS_CREDS_PSW -o $IBM_CLOUD_DEVOPS_ORG -s 実稼働
 
-                        echo "Deploying...."
+                        echo "デプロイ中...."
                         export CF_APP_NAME="prod-$IBM_CLOUD_DEVOPS_APP_NAME"
                         cf delete $CF_APP_NAME -f
                         cf push $CF_APP_NAME -n $CF_APP_NAME -m 64M -i 1
@@ -132,14 +132,14 @@ pipeline {
             // post build section to use "publishDeployRecord" method to publish deploy record and notify OTC of stage status
             post {
                 success {
-                    publishDeployRecord environment: "PRODUCTION", appUrl: "http://prod-${IBM_CLOUD_DEVOPS_APP_NAME}.mybluemix.net", result:"SUCCESS"
+                    publishDeployRecord environment: "PRODUCTION", appUrl: "http://prod-${IBM_CLOUD_DEVOPS_APP_NAME}.mybluemix.net", result:"成功"
                     // use "notifyOTC" method to notify otc of stage status
-                    notifyOTC stageName: "Deploy to Prod", status: "SUCCESS"
+                    notifyOTC stageName: "実稼働にデプロイ", status: "成功"
                 }
                 failure {
-                    publishDeployRecord environment: "PRODUCTION", appUrl: "http://prod-${IBM_CLOUD_DEVOPS_APP_NAME}.mybluemix.net", result:"FAIL"
+                    publishDeployRecord environment: "PRODUCTION", appUrl: "http://prod-${IBM_CLOUD_DEVOPS_APP_NAME}.mybluemix.net", result:"失敗"
                     // use "notifyOTC" method to notify otc of stage status
-                    notifyOTC stageName: "Deploy to Prod", status: "FAILURE"
+                    notifyOTC stageName: "実稼働にデプロイ", status: "失敗"
                 }
             }
         }
