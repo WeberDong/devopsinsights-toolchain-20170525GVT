@@ -114,7 +114,7 @@ pipeline {
                 // Push the Weather App to Bluemix, production space
                 sh '''
                         echo "CF Login..."
-                        cf api https://api.ng.bluemix.net
+                        cf api https://api.stage1.ng.bluemix.net
                         cf login -u $IBM_CLOUD_DEVOPS_CREDS_USR -p $IBM_CLOUD_DEVOPS_CREDS_PSW -o $IBM_CLOUD_DEVOPS_ORG -s production
 
                         echo "Deploying...."
