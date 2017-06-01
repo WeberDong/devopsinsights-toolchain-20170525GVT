@@ -36,10 +36,10 @@ pipeline {
             // post build section to use "publishBuildRecord" method to publish build record
             post {
                 success {
-                    publishBuildRecord gitBranch: "${GIT_BRANCH}", gitCommit: "${GIT_COMMIT}", gitRepo: "${GIT_REPO}", result:"成功"
+                    publishBuildRecord gitBranch: "${GIT_BRANCH}", gitCommit: "${GIT_COMMIT}", gitRepo: "${GIT_REPO}", result:"PASS"
                 }
                 failure {
-                    publishBuildRecord gitBranch: "${GIT_BRANCH}", gitCommit: "${GIT_COMMIT}", gitRepo: "${GIT_REPO}", result:"失敗"
+                    publishBuildRecord gitBranch: "${GIT_BRANCH}", gitCommit: "${GIT_COMMIT}", gitRepo: "${GIT_REPO}", result:"FAIL"
                 }
             }
         }
@@ -132,12 +132,12 @@ pipeline {
             // post build section to use "publishDeployRecord" method to publish deploy record and notify OTC of stage status
             post {
                 success {
-                    publishDeployRecord environment: "PRODUCTION", appUrl: "http://prod-${IBM_CLOUD_DEVOPS_APP_NAME}.mybluemix.net", result:"成功"
+                    publishDeployRecord environment: "PRODUCTION", appUrl: "http://prod-${IBM_CLOUD_DEVOPS_APP_NAME}.mybluemix.net", result:"SUCCESS"
                     // use "notifyOTC" method to notify otc of stage status
                     notifyOTC stageName: "実稼働にデプロイ", status: "成功"
                 }
                 failure {
-                    publishDeployRecord environment: "PRODUCTION", appUrl: "http://prod-${IBM_CLOUD_DEVOPS_APP_NAME}.mybluemix.net", result:"失敗"
+                    publishDeployRecord environment: "PRODUCTION", appUrl: "http://prod-${IBM_CLOUD_DEVOPS_APP_NAME}.mybluemix.net", result:"FAIL"
                     // use "notifyOTC" method to notify otc of stage status
                     notifyOTC stageName: "実稼働にデプロイ", status: "失敗"
                 }
