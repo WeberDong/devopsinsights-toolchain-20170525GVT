@@ -20,7 +20,7 @@ pipeline {
                     // requires SonarQube Scanner 2.8+
                     def scannerHome = tool 'SonarQube Scanner 3.0.1.733';
                    
-                    withSonarQubeEnv('Default SQ Server') {
+                    withSonarQubeEnv('SonarQube GVT') {
 
                         env.SQ_HOSTNAME = bmxcd.dhcp.hakozaki.ibm.com;
                         env.SQ_AUTHENTICATION_TOKEN = e32bb63827c79bcd4eb90b92efa4dd3c53758294;
