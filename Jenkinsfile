@@ -18,7 +18,7 @@ pipeline {
             steps {
                 script {
                     // requires SonarQube Scanner 2.8+
-                    // def scannerHome = tool 'Default SQ Scanner';
+                    def scannerHome = tool 'SonarQube Scanner 3.0.1.733';
                    
                     withSonarQubeEnv('Default SQ Server') {
 
@@ -26,8 +26,8 @@ pipeline {
                         env.SQ_AUTHENTICATION_TOKEN = e32bb63827c79bcd4eb90b92efa4dd3c53758294;
                         env.SQ_PROJECT_KEY = "devopsinsights-toolchain-20170525GVT";
 
-                     // sh "${scannerHome}/bin/sonar-scanner \
-                        sh "/etc/sonar-scanner-3.0.1.733-linux/bin/sonar-scanner \
+                      sh "${scannerHome}/bin/sonar-scanner \
+                     //   sh "/etc/sonar-scanner-3.0.1.733-linux/bin/sonar-scanner \
                                 -Dsonar.projectKey=${SQ_PROJECT_KEY} \
                                 -Dsonar.sources=. \
                                 -Dsonar.organization=fuse@jp.ibm.com";
