@@ -22,7 +22,7 @@ pipeline {
                    
                     withSonarQubeEnv('SonarQube GVT') {
 
-                        env.SQ_HOSTNAME = bmxcd.dhcp.hakozaki.ibm.com;
+                        env.SQ_HOSTNAME = http://bmxcd.dhcp.hakozaki.ibm.com:9000;
                         env.SQ_AUTHENTICATION_TOKEN = e32bb63827c79bcd4eb90b92efa4dd3c53758294;
                         env.SQ_PROJECT_KEY = "devopsinsights-toolchain-20170525GVT";
 
