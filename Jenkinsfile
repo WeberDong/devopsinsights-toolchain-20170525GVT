@@ -19,8 +19,7 @@ pipeline {
                 script {
                     // requires SonarQube Scanner 2.8+
                     // def scannerHome = tool 'Default SQ Scanner';
-                    def scannerHome = tool 'SonarQube way';
-
+                   
                     withSonarQubeEnv('Default SQ Server') {
 
                         env.SQ_HOSTNAME = bmxcd.dhcp.hakozaki.ibm.com;
