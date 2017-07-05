@@ -24,8 +24,7 @@ pipeline {
                     withSonarQubeEnv('Default SQ Server') {
 
                         env.SQ_HOSTNAME = bmxcd.dhcp.hakozaki.ibm.com;
-                        env.SQ_AUTHENTICATION_TOKEN = e32bb63827c79bcd4eb90b92efa4dd3c53758294
-SONAR_AUTH_TOKEN;
+                        env.SQ_AUTHENTICATION_TOKEN = e32bb63827c79bcd4eb90b92efa4dd3c53758294;
                         env.SQ_PROJECT_KEY = "devopsinsights-toolchain-20170525GVT";
 
                         sh "${scannerHome}/bin/sonar-scanner \
