@@ -18,7 +18,8 @@ pipeline {
             steps {
                 script {
                     // requires SonarQube Scanner 2.8+
-                    def scannerHome = tool 'Default SQ Scanner';
+                    // def scannerHome = tool 'Default SQ Scanner';
+                    def scannerHome = tool 'SonarQube way';
 
                     withSonarQubeEnv('Default SQ Server') {
 
