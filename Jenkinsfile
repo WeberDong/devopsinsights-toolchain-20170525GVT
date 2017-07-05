@@ -27,7 +27,6 @@ pipeline {
                         env.SQ_PROJECT_KEY = "devopsinsights-toolchain-20170525GVT";
 
                       sh "${scannerHome}/bin/sonar-scanner \
-                     //   sh "/etc/sonar-scanner-3.0.1.733-linux/bin/sonar-scanner \
                                 -Dsonar.projectKey=${SQ_PROJECT_KEY} \
                                 -Dsonar.sources=. \
                                 -Dsonar.organization=fuse@jp.ibm.com";
