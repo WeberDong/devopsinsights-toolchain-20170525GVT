@@ -79,12 +79,12 @@ pipeline {
                 success {
                     publishDeployRecord environment: "STAGING", appUrl: "http://staging-${IBM_CLOUD_DEVOPS_APP_NAME}.mybluemix.net", result:"SUCCESS"
                     // use "notifyOTC" method to notify otc of stage status
-                    notifyOTC stageName: "ステージングにデプロイ", status: "成功"
+                    notifyOTC stageName: "ステージングにデプロイ", status: "SUCCESS"
                 }
                 failure {
                     publishDeployRecord environment: "STAGING", appUrl: "http://staging-${IBM_CLOUD_DEVOPS_APP_NAME}.mybluemix.net", result:"FAIL"
                     // use "notifyOTC" method to notify otc of stage status
-                    notifyOTC stageName: "Deploy to Staging", status: "失敗"
+                    notifyOTC stageName: "Deploy to Staging", status: "FAIL"
                 }
             }
         }
@@ -134,12 +134,12 @@ pipeline {
                 success {
                     publishDeployRecord environment: "PRODUCTION", appUrl: "http://prod-${IBM_CLOUD_DEVOPS_APP_NAME}.mybluemix.net", result:"SUCCESS"
                     // use "notifyOTC" method to notify otc of stage status
-                    notifyOTC stageName: "実稼働にデプロイ", status: "成功"
+                    notifyOTC stageName: "実稼働にデプロイ", status: "SUCCESS"
                 }
                 failure {
                     publishDeployRecord environment: "PRODUCTION", appUrl: "http://prod-${IBM_CLOUD_DEVOPS_APP_NAME}.mybluemix.net", result:"FAIL"
                     // use "notifyOTC" method to notify otc of stage status
-                    notifyOTC stageName: "実稼働にデプロイ", status: "失敗"
+                    notifyOTC stageName: "実稼働にデプロイ", status: "FAIL"
                 }
             }
         }
