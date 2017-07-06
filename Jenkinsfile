@@ -28,7 +28,7 @@ pipeline {
 
                       sh "${scannerHome}/bin/sonar-scanner \
                                 -Dsonar.projectKey=${SQ_PROJECT_KEY} \
-                                -Dsonar.sources=. \;
+                                -Dsonar.sources=. ;
                                 //-Dsonar.organization=fuse@jp.ibm.com";
                     }
                 }
