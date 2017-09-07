@@ -102,9 +102,9 @@ pipeline {
                 // Push the Weather App to Bluemix, staging space
                 sh '''
                         echo "CF ログイン..."
-               //         cf api https://api.stage1.ng.bluemix.net
+                        cf api https://api.stage1.ng.bluemix.net
                //         cf login -u $IBM_CLOUD_DEVOPS_CREDS_USR -p $IBM_CLOUD_DEVOPS_CREDS_PSW -o $IBM_CLOUD_DEVOPS_ORG -s ステージング
-                        cf login -a api.stage1.bluemix.net --apikey $IBM_CLOUD_DEVOPS_API_KEY -o $IBM_CLOUD_DEVOPS_ORG -s ステージング
+                        cf login -u apikey -p $IBM_CLOUD_DEVOPS_API_KEY -o $IBM_CLOUD_DEVOPS_ORG -s ステージング
                         echo "デプロイ中...."
                         export CF_APP_NAME="staging-$IBM_CLOUD_DEVOPS_APP_NAME"
                         cf delete $CF_APP_NAME -f
@@ -157,9 +157,9 @@ pipeline {
                 // Push the Weather App to Bluemix, production space
                 sh '''
                         echo "CF ログイン..."
-                   //     cf api https://api.stage1.ng.bluemix.net
+                        cf api https://api.stage1.ng.bluemix.net
                    //     cf login -u $IBM_CLOUD_DEVOPS_CREDS_USR -p $IBM_CLOUD_DEVOPS_CREDS_PSW -o $IBM_CLOUD_DEVOPS_ORG -s 実稼働
-                        cf login -a api.stage1.bluemix.net --apikey $IBM_CLOUD_DEVOPS_API_KEY -o $IBM_CLOUD_DEVOPS_ORG -s 実稼働
+                        cf login -u apikey -p $IBM_CLOUD_DEVOPS_API_KEY -o $IBM_CLOUD_DEVOPS_ORG -s 実稼働
 
                         echo "デプロイ中...."
                         export CF_APP_NAME="prod-$IBM_CLOUD_DEVOPS_APP_NAME"
