@@ -61,7 +61,7 @@ pipeline {
                 git 'https://github.com/mfuse/devopsinsights-toolchain-20170525GVT.git'
             }
         }
-        stage ('SonarQube analysis') {
+  /*      stage ('SonarQube analysis') {
             steps {
                 script {
                     // requires SonarQube Scanner 2.8+
@@ -96,7 +96,7 @@ pipeline {
                     publishSQResults SQHostURL: "${SQ_HOSTNAME}", SQAuthToken: "${SQ_AUTHENTICATION_TOKEN}", SQProjectKey:"${SQ_PROJECT_KEY}"
                 }
              }
-}
+} */
         stage('ステージングにデプロイ') {
             steps {
                 // Push the Weather App to Bluemix, staging space
