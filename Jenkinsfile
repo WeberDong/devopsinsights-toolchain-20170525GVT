@@ -126,7 +126,7 @@ pipeline {
                 failure {
                     publishDeployRecord environment: "STAGING", appUrl: "http://staging-${IBM_CLOUD_DEVOPS_APP_NAME}.mybluemix.net", result:"FAIL"
                     // use "notifyOTC" method to notify otc of stage status
-                    notifyOTC stageName: "Deploy to Staging", status: "FAIL"
+                    notifyOTC stageName: "ステージングにデプロイ", status: "FAIL"
                 }
             }
         }
