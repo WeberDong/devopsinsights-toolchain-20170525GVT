@@ -11,7 +11,7 @@ pipeline {
     environment {
         // You need to specify 4 required environment variables first, they are going to be used for the following IBM Cloud DevOps steps
      //   IBM_CLOUD_DEVOPS_CREDS = credentials('BM_CRED')
-        IBM_CLOUD_DEVOPS_API_KEY = credentials('API_KEY')
+        IBM_CLOUD_DEVOPS_API_KEY = 'PbPFXeC_GUFNzX9bAsMXFLtJud7QAv-kaC2M1mn8819C'
         IBM_CLOUD_DEVOPS_ORG = 'fuse@jp.ibm.com'
         IBM_CLOUD_DEVOPS_APP_NAME = 'WheatherApp-20170525GVT'
         IBM_CLOUD_DEVOPS_TOOLCHAIN_ID = '6bc113bb-5331-493c-8da1-45631fc33adf'
