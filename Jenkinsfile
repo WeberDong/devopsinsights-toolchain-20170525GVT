@@ -10,7 +10,8 @@ pipeline {
     agent any
     environment {
         // You need to specify 4 required environment variables first, they are going to be used for the following IBM Cloud DevOps steps
-        IBM_CLOUD_DEVOPS_CREDS = credentials('BM_CRED')
+     //   IBM_CLOUD_DEVOPS_CREDS = credentials('BM_CRED')
+        IBM_CLOUD_DEVOPS_API_KEY = credentials('API_KEY')
         IBM_CLOUD_DEVOPS_ORG = 'fuse@jp.ibm.com'
         IBM_CLOUD_DEVOPS_APP_NAME = 'WheatherApp-20170525GVT'
         IBM_CLOUD_DEVOPS_TOOLCHAIN_ID = '6bc113bb-5331-493c-8da1-45631fc33adf'
@@ -101,9 +102,9 @@ pipeline {
                 // Push the Weather App to Bluemix, staging space
                 sh '''
                         echo "CF ログイン..."
-                        cf api https://api.stage1.ng.bluemix.net
-                        cf login -u $IBM_CLOUD_DEVOPS_CREDS_USR -p $IBM_CLOUD_DEVOPS_CREDS_PSW -o $IBM_CLOUD_DEVOPS_ORG -s ステージング
-
+               //         cf api https://api.stage1.ng.bluemix.net
+               //         cf login -u $IBM_CLOUD_DEVOPS_CREDS_USR -p $IBM_CLOUD_DEVOPS_CREDS_PSW -o $IBM_CLOUD_DEVOPS_ORG -s ステージング
+                        cf login -a api.stage1.bluemix.net --apikey $IBM_CLOUD_DEVOPS_API_KEY -o $IBM_CLOUD_DEVOPS_ORG -s ステージング
                         echo "デプロイ中...."
                         export CF_APP_NAME="staging-$IBM_CLOUD_DEVOPS_APP_NAME"
                         cf delete $CF_APP_NAME -f
@@ -156,8 +157,9 @@ pipeline {
                 // Push the Weather App to Bluemix, production space
                 sh '''
                         echo "CF ログイン..."
-                        cf api https://api.stage1.ng.bluemix.net
-                        cf login -u $IBM_CLOUD_DEVOPS_CREDS_USR -p $IBM_CLOUD_DEVOPS_CREDS_PSW -o $IBM_CLOUD_DEVOPS_ORG -s 実稼働
+                   //     cf api https://api.stage1.ng.bluemix.net
+                   //     cf login -u $IBM_CLOUD_DEVOPS_CREDS_USR -p $IBM_CLOUD_DEVOPS_CREDS_PSW -o $IBM_CLOUD_DEVOPS_ORG -s 実稼働
+                        cf login -a api.stage1.bluemix.net --apikey $IBM_CLOUD_DEVOPS_API_KEY -o $IBM_CLOUD_DEVOPS_ORG -s 実稼働
 
                         echo "デプロイ中...."
                         export CF_APP_NAME="prod-$IBM_CLOUD_DEVOPS_APP_NAME"
