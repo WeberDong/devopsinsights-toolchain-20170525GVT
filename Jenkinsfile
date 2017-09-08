@@ -10,7 +10,7 @@ pipeline {
     agent any
     environment {
         // You need to specify 4 required environment variables first, they are going to be used for the following IBM Cloud DevOps steps
-        IBM_CLOUD_DEVOPS_CREDS = credentials('BM_CRED')
+        //IBM_CLOUD_DEVOPS_CREDS = credentials('BM_CRED')
         IBM_CLOUD_DEVOPS_API_KEY = credentials('API_KEY')
         IBM_CLOUD_DEVOPS_ORG = 'fuse@jp.ibm.com'
         IBM_CLOUD_DEVOPS_APP_NAME = 'WheatherApp-20170525GVT'
