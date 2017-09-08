@@ -61,7 +61,7 @@ pipeline {
                 git 'https://github.com/mfuse/devopsinsights-toolchain-20170525GVT.git'
             }
         }
-  /*      stage ('SonarQube analysis') {
+        stage ('SonarQube analysis') {
             steps {
                 script {
                     // requires SonarQube Scanner 2.8+
@@ -96,7 +96,7 @@ pipeline {
                     publishSQResults SQHostURL: "${SQ_HOSTNAME}", SQAuthToken: "${SQ_AUTHENTICATION_TOKEN}", SQProjectKey:"${SQ_PROJECT_KEY}"
                 }
              }
-} */
+} 
         stage('ステージングにデプロイ') {
             steps {
                 // Push the Weather App to Bluemix, staging space
@@ -105,6 +105,7 @@ pipeline {
                         cf api https://api.stage1.ng.bluemix.net
                //         cf login -u $IBM_CLOUD_DEVOPS_CREDS_USR -p $IBM_CLOUD_DEVOPS_CREDS_PSW -o $IBM_CLOUD_DEVOPS_ORG -s ステージング
                         cf login -u apikey -p $IBM_CLOUD_DEVOPS_API_KEY -o $IBM_CLOUD_DEVOPS_ORG -s ステージング
+                        
                         echo "デプロイ中...."
                         export CF_APP_NAME="staging-$IBM_CLOUD_DEVOPS_APP_NAME"
                         cf delete $CF_APP_NAME -f
