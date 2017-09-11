@@ -95,8 +95,8 @@ pipeline {
                 always {
                     publishSQResults SQHostURL: "${SQ_HOSTNAME}", SQAuthToken: "${SQ_AUTHENTICATION_TOKEN}", SQProjectKey:"${SQ_PROJECT_KEY}"
                 }
-             }*/
-} 
+             }
+} */
         stage('ステージングにデプロイ') {
             steps {
                 // Push the Weather App to Bluemix, staging space
