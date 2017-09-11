@@ -75,8 +75,8 @@ pipeline {
 
                       sh "${scannerHome}/bin/sonar-scanner \
                                 -Dsonar.projectKey=${SQ_PROJECT_KEY} \
-                                -Dsonar.sources=. ";
-                              // -Dsonar.organization=";
+                                -Dsonar.sources=. \
+                                -Dsonar.organization=default-organization";
                     }
                 }
             }
@@ -86,7 +86,7 @@ pipeline {
                 script {
 
                     def qualitygate = waitForQualityGate()
-                    if (qualitygate.status != "SUCCESS") {
+                    if (qualitygate.status != "OK") {
                         error "Pipeline aborted due to quality gate coverage failure: ${qualitygate.status}"
                     }
                 }
