@@ -65,7 +65,7 @@ pipeline {
             steps {
                 script {
                     // requires SonarQube Scanner 2.8+
-                    def scannerHome = tool 'SQ Scanner GVT';
+                    def scannerHome = tool 'SonarQube Scanner GVT';
                    
                     withSonarQubeEnv('SonarQube GVT') {
 
