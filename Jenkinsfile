@@ -69,12 +69,12 @@ pipeline {
                    
                     withSonarQubeEnv('SonarQube GVT') {
 
-                        env.SQ_HOSTNAME = SONAR_HOST_URL;
-                        env.SQ_AUTHENTICATION_TOKEN = SONAR_AUTH_TOKEN;
+                      //  env.SQ_HOSTNAME = SONAR_HOST_URL;
+                      //  env.SQ_AUTHENTICATION_TOKEN = SONAR_AUTH_TOKEN;
+                        env.SQ_HOSTNAME = "http://bmxcd.dhcp.hakozaki.ibm.com:9000";
+                        env.SQ_AUTHENTICATION_TOKEN = "4e838a5fed188b8cb5ff01c3b1dc80d416d786b8";
                         env.SQ_PROJECT_KEY = "devopsinsights-toolchain-20170525GVT";
-                        sh echo "${SQ_AUTHENTICATION_TOKEN}"
-                        sh echo "${SQ_HOSTNAME}"
-                        
+                       
 
                       sh "${scannerHome}/bin/sonar-scanner \
                                 -Dsonar.projectKey=${SQ_PROJECT_KEY} \
