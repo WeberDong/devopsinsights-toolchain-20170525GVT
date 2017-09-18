@@ -72,6 +72,9 @@ pipeline {
                         env.SQ_HOSTNAME = SONAR_HOST_URL;
                         env.SQ_AUTHENTICATION_TOKEN = SONAR_AUTH_TOKEN;
                         env.SQ_PROJECT_KEY = "devopsinsights-toolchain-20170525GVT";
+                        sh 'echo $SQ_AUTHENTICATION_TOKEN'
+                        sh 'echo $SQ_HOSTNAME'
+                        
 
                       sh "${scannerHome}/bin/sonar-scanner \
                                 -Dsonar.projectKey=${SQ_PROJECT_KEY} \
