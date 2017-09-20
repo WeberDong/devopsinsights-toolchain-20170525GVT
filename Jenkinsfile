@@ -121,12 +121,12 @@ pipeline {
             // post build section to use "publishDeployRecord" method to publish deploy record and notify OTC of stage status
             post {
                 success {
-                    publishDeployRecord environment: "STAGING", appUrl: "http://staging-${IBM_CLOUD_DEVOPS_APP_NAME}.mybluemix.net", result:"SUCCESS"
+                    publishDeployRecord environment: "STAGING", appUrl: "http://staging-${IBM_CLOUD_DEVOPS_APP_NAME}.stage1.mybluemix.net", result:"SUCCESS"
                     // use "notifyOTC" method to notify otc of stage status
                     notifyOTC stageName: "ステージングにデプロイ", status: "SUCCESS"
                 }
                 failure {
-                    publishDeployRecord environment: "STAGING", appUrl: "http://staging-${IBM_CLOUD_DEVOPS_APP_NAME}.mybluemix.net", result:"FAIL"
+                    publishDeployRecord environment: "STAGING", appUrl: "http://staging-${IBM_CLOUD_DEVOPS_APP_NAME}.stage1.mybluemix.net", result:"FAIL"
                     // use "notifyOTC" method to notify otc of stage status
                     notifyOTC stageName: "ステージングにデプロイ", status: "FAIL"
                 }
@@ -135,7 +135,7 @@ pipeline {
         stage('FVT') {
             //set the APP_URL as the environment variable for the fvt
             environment {
-                APP_URL = "http://staging-${IBM_CLOUD_DEVOPS_APP_NAME}.mybluemix.net"
+                APP_URL = "http://staging-${IBM_CLOUD_DEVOPS_APP_NAME}.stage1.mybluemix.net"
             }
             steps {
                 sh 'grunt fvt-test --no-color -f'
