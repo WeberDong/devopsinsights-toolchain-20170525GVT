@@ -105,7 +105,7 @@ pipeline {
                         echo "CF ログイン..."
                         cf api https://api.stage1.ng.bluemix.net
                      #  cf login -u $IBM_CLOUD_DEVOPS_CREDS_USR -p $IBM_CLOUD_DEVOPS_CREDS_PSW -o $IBM_CLOUD_DEVOPS_ORG -s ステージング
-                        cf login -u jenkins -p $IBM_CLOUD_DEVOPS_API_KEY -o $IBM_CLOUD_DEVOPS_ORG -s ステージング
+                        cf login -u apikey -p $IBM_CLOUD_DEVOPS_API_KEY -o $IBM_CLOUD_DEVOPS_ORG -s ステージング
                         
                         echo "デプロイ中...."
                         export CF_APP_NAME="staging-$IBM_CLOUD_DEVOPS_APP_NAME"
@@ -161,7 +161,7 @@ pipeline {
                         echo "CF ログイン..."
                         cf api https://api.stage1.ng.bluemix.net
                       # cf login -u $IBM_CLOUD_DEVOPS_CREDS_USR -p $IBM_CLOUD_DEVOPS_CREDS_PSW -o $IBM_CLOUD_DEVOPS_ORG -s 実稼働
-                        cf login -u jenkins -p $IBM_CLOUD_DEVOPS_API_KEY -o $IBM_CLOUD_DEVOPS_ORG -s 実稼働
+                        cf login -u apikey -p $IBM_CLOUD_DEVOPS_API_KEY -o $IBM_CLOUD_DEVOPS_ORG -s 実稼働
 
                         echo "デプロイ中...."
                         export CF_APP_NAME="prod-$IBM_CLOUD_DEVOPS_APP_NAME"
