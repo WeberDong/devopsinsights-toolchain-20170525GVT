@@ -133,7 +133,7 @@ pipeline {
             }
         }
         stage('FVT') {
-            //set the APP_URL as the environment variable for the fvt
+            //set the APP_URL as the environment variable for the fvt 
             environment {
                 APP_URL = "http://staging-${IBM_CLOUD_DEVOPS_APP_NAME}.stage1.mybluemix.net"
             }
