@@ -4,7 +4,7 @@
     and functional verification tests, deploy to staging and production environment and use IBM Cloud DevOps gate.
     We use this as an example to use our plugin in the Jenkinsfile
     Basically, you need to specify required 4 environment variables and then you will be able to use the 4 different methods
-    for the build/test/deploy stage and the gate
+    for the build/test/deploy stage and the gate 
  */
 pipeline {
     agent any
