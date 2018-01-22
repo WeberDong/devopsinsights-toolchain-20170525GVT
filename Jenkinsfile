@@ -51,8 +51,8 @@ pipeline {
             // post build section to use "publishTestResult" method to publish test result
             post {
                 always {
-                    publishTestResult type:'ut2', fileLocation: './mochatest.json'
-                //          publishTestResult type:'unittest', fileLocation: './mochatest.json'
+                 //   publishTestResult type:'ut2', fileLocation: './mochatest.json'
+                    publishTestResult type:'unittest', fileLocation: './mochatest.json'
                     publishTestResult type:'code', fileLocation: './tests/coverage/reports/coverage-summary.json'
                 }
             }
