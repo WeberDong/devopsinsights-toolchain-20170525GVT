@@ -1,0 +1,4141 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xml-report name="AppScan Report" technology="DAST" xmlExportVersion="2.42">
+  <content>
+    <executive-summary>1</executive-summary>
+    <issues>1</issues>
+    <table-of-content>1</table-of-content>
+    <introduction>1</introduction>
+    <by-url>0</by-url>
+    <fix-recommendations>1</fix-recommendations>
+    <variants>1</variants>
+    <request-response>1</request-response>
+    <differences>1</differences>
+    <advisories>1</advisories>
+    <advisories-dot-net>1</advisories-dot-net>
+    <advisories-j2ee>1</advisories-j2ee>
+    <advisories-php>1</advisories-php>
+    <application-data>1</application-data>
+    <visited-urls>1</visited-urls>
+    <filtered-urls>0</filtered-urls>
+    <script-parameters>0</script-parameters>
+    <broken-links>1</broken-links>
+    <comments>0</comments>
+    <java-scripts>0</java-scripts>
+    <cookies>0</cookies>
+    <issue-information>1</issue-information>
+    <page-break-after-each-issue-url>0</page-break-after-each-issue-url>
+    <cover-page>1</cover-page>
+    <regulations>0</regulations>
+    <delta-analysis>0</delta-analysis>
+    <is-rtf-report>0</is-rtf-report>
+  </content>
+  <dictionary>
+    <item id="secure">セキュア</item>
+    <item id="comments">コメント</item>
+    <item id="scanDateColon">スキャン開始時刻:</item>
+    <item id="issueTypesDiscovered">問題のタイプ</item>
+    <item id="threatClassificationColon">脅威の分類:</item>
+    <item id="reportTagLine">AppScan Web アプリケーション・セキュリティー・レポート</item>
+    <item id="FilteredUrl.Untrusted">未テストの Web サーバー</item>
+    <item id="urlColon">URL:</item>
+    <item id="originalResponseLabel">オリジナルの応答</item>
+    <item id="threatClassification">WASC 脅威の分類</item>
+    <item id="unwantedLabel">不要</item>
+    <item id="affectedProductsColon">影響を受ける製品:</item>
+    <item id="urlsStatus">URL の状態</item>
+    <item id="issuesByURL">URL 別にソートされた問題</item>
+    <item id="allowConcurrentLogins">同時ログイン:</item>
+    <item id="responseLabel">応答</item>
+    <item id="xssBlurb">ブラウザーでこのページが開いたときに表示されるポップアップのシミュレーション</item>
+    <item id="ApplicationData.HttpParamType.NoneOrUnknown">欠落または不明</item>
+    <item id="documentMap">文書マップ</item>
+    <item id="BinaryDataNotIncluded">この要求/応答にはバイナリー・コンテンツが含まれており、これは生成されるレポートには組み込まれません。</item>
+    <item id="executiveSummary">概要</item>
+    <item id="entityColon">エンティティー:</item>
+    <item id="general">全般</item>
+    <item id="detectedCookies">追跡された Cookie:</item>
+    <item id="trialVersionMessage">この概要レポートは、Application Security Analyzer の無料プランを使用して作成されています。 フル・サービスをご購入になると、検出された問題の詳しい説明とその対処方法が記載された完全なレポートにアクセスすることができます。</item>
+    <item id="cvssScoreColon">CVSS スコア:</item>
+    <item id="ApplicationData.HttpParamType.TextArea">テキスト域</item>
+    <item id="informational">情報</item>
+    <item id="sessionVerifierPattern">セッション内パターン:</item>
+    <item id="ApplicationData.HttpParamType.Flash">Flash</item>
+    <item id="ApplicationData.HttpParamType.Image">イメージ</item>
+    <item id="differenceColon">差:</item>
+    <item id="ApplicationData.HttpParamType.Radio">ラジオ</item>
+    <item id="detailedSummaryContent">このセクションには、見つかったすべての問題のタイプ、推奨されるすべての修復タスク、すべての脆弱な URL など、スキャン結果の詳細なリストが記載されています。これは、見つかった問題の対策に必要な作業の範囲と優先順位の特定を支援するとともに、アプリケーションのセキュリティー状態を詳細に理解するためのものです。</item>
+    <item id="fixedIssues">解決済みの問題</item>
+    <item id="testDescriptionColon">テストの説明:</item>
+    <item id="sessionManagementMode">ログイン方法:</item>
+    <item id="totalIssuesInScanColon">スキャンで発見されたセキュリティー問題の合計:</item>
+    <item id="referencesColon">参考資料:</item>
+    <item id="brokenLinks">失敗した要求</item>
+    <item id="testPolicyColon">テスト・ポリシー:</item>
+    <item id="parameters">パラメーター</item>
+    <item id="introductionAndObjectivesContent">プロジェクト名、スキャンの目的など、スキャンについての一般的な情報。</item>
+    <item id="ApplicationData.HttpParamType.Simple_Link">単純リンク</item>
+    <item id="FilteredUrl.PathLimit">パスの制限</item>
+    <item id="rulesColon">ルール:</item>
+    <item id="newUrls">新規 URL</item>
+    <item id="ApplicationData.HttpParamType.Post_Data">本文</item>
+    <item id="openIssues">未解決の問題</item>
+    <item id="filteredLinks">フィルタリングされた URL</item>
+    <item id="operatingSystemColon">オペレーティング・システム:</item>
+    <item id="documentMapContent">このレポートは、以下のセクションで構成されています。</item>
+    <item id="scanBaseStartedColon">ベース・スキャンが開始されました:</item>
+    <item id="securityIssuesBySections">セクション別の詳細なセキュリティー問題</item>
+    <item id="testLoginLabel">テスト・ログイン</item>
+    <item id="InformationalSeverityIssues">情報として示された問題:</item>
+    <item id="javaScripts">JavaScript</item>
+    <item id="dictionarySessionManagementModeUnknown">不明</item>
+    <item id="FilteredUrl.Path">パス</item>
+    <item id="vulnerableURLs">脆弱性のある URL</item>
+    <item id="sniqueIssuesDetectedAcrossRegulation">規制中の {1} セクションで検出された {0} 個の固有の問題:</item>
+    <item id="highSeverityIssues">重大度の高い問題:</item>
+    <item id="FilteredUrl.PredictableUrl">おそらく類似の DOM</item>
+    <item id="fixColon">修正:</item>
+    <item id="dictionaryTrue">真</item>
+    <item id="dictionaryNone">なし</item>
+    <item id="comment">コメント</item>
+    <item id="cookies">Cookie</item>
+    <item id="firstSet">最初のセット</item>
+    <item id="hostColon">ホスト</item>
+    <item id="objectivesContent">AppScan は Web アプリケーションについてリアルタイムのセキュリティー評価を実施します。 これらの評価は、アプリケーションのセキュリティーに関する問題を明らかにし、これらの問題に関連する影響およびリスクを説明し、修復の計画と優先順位付けの指示を提供することを目的としています。この業務は、管理下での攻撃および侵入を行って、アプリケーションのセキュリティーの全体的なレベルを評価することを目的として実施されました。</item>
+    <item id="ApplicationData.HttpParamType.Checkbox">チェック・ボックス</item>
+    <item id="bodyparameter">ボディー・パラメーター</item>
+    <item id="benignLabel">無害</item>
+    <item id="cipherSuiteId">ID</item>
+    <item id="attackNotSupported">このアタックは、AppScan ではサポートされていません。</item>
+    <item id="ApplicationData.HttpParamType.Button">ボタン</item>
+    <item id="rawTestResponseLabel">未加工のテスト応答:</item>
+    <item id="loginSettings">ログイン設定</item>
+    <item id="FilteredUrl.UnsupportFlash">サポートされない Flash</item>
+    <item id="createdByAppScan">このレポートは IBM Security AppScan Standard によって作成されました</item>
+    <item id="nodePathColon">ツリー・ノードで生成されたレポート:</item>
+    <item id="additionalDataColon">追加データ:</item>
+    <item id="issuesStatus">問題の状態</item>
+    <item id="testResponseNextToLastLabel">テスト応答 (最後から 2 番目)</item>
+    <item id="applicationServerColon">アプリケーション・サーバー:</item>
+    <item id="generalInformation">全般情報</item>
+    <item id="testTypeColon">テスト・タイプ:</item>
+    <item id="executiveSummaryContent">このセクションは、グラフまたは数字の比較を使用して、スキャン中に収集された情報の「概略」であり、アプリケーションのセキュリティー状態を全般的に理解するためのものです。</item>
+    <item id="ApplicationData.HttpParamType.AMF">AMF</item>
+    <item id="ApplicationData.HttpParamType.XML">XML</item>
+    <item id="deltaAnalysis">差分分析</item>
+    <item id="testResponseLastLabel">テスト応答 (最後)</item>
+    <item id="ApplicationData.HttpParamType.Hidden">非表示</item>
+    <item id="cweColon">CWE:</item>
+    <item id="cveColon">CVE:</item>
+    <item id="of">/</item>
+    <item id="addedToRequestColon">要求に追加されました:</item>
+    <item id="numberOfIssues">問題の数</item>
+    <item id="FilteredUrl.DomSimilarity">類似の DOM</item>
+    <item id="trialVersionWatermark">無料のプラン</item>
+    <item id="malwareLabel">悪質</item>
+    <item id="dictionarySessionManagementModeAutomatic">自動</item>
+    <item id="ApplicationData.HttpParamType.Submit">サブミット</item>
+    <item id="added">追加済み</item>
+    <item id="fixed">固定値</item>
+    <item id="cause">原因</item>
+    <item id="index">索引</item>
+    <item id="issue">問題</item>
+    <item id="query">クエリー</item>
+    <item id="ApplicationData.HttpParamType.Select">選択</item>
+    <item id="value">値</item>
+    <item id="cipherSuitesTitle">このサーバーでは以下の脆弱な暗号スイートがサポートされています。</item>
+    <item id="fix">修正</item>
+    <item id="low">低</item>
+    <item id="new">新規</item>
+    <item id="toc">TOC</item>
+    <item id="url">URL</item>
+    <item id="php">PHP</item>
+    <item id="lowSeverityIssues">低重大度の問題:</item>
+    <item id="visitedLinks">認識された URL</item>
+    <item id="sampleReportWatermark">サンプル・レポート</item>
+    <item id="remaining">残り</item>
+    <item id="expires">期限切れ</item>
+    <item id="removedUrls">削除済み URL</item>
+    <item id="targetScan">ターゲット・スキャン</item>
+    <item id="ApplicationData.HttpParamType.Custom_Parameter">カスタム</item>
+    <item id="mediumSeverityIssues">中重大度の問題:</item>
+    <item id="FilteredUrl.FileExtension">ファイル拡張子</item>
+    <item id="issueType">問題のタイプ</item>
+    <item id="FilteredUrl.LogoutFilter">ログアウト・フィルター</item>
+    <item id="ApplicationData.HttpParamType.Password">パスワード</item>
+    <item id="scanFileNameColon">スキャン・ファイル名:</item>
+    <item id="enableJsxInLoginReplay">JavaScript の実行:</item>
+    <item id="dictionarySessionManagementModePrompt">プロンプト</item>
+    <item id="webServerColon">Web サーバー:</item>
+    <item id="dictionaryEnabled">有効</item>
+    <item id="objectives">目的</item>
+    <item id="xfidColon">X-Force:</item>
+    <item id="introductionContent">このレポートには、IBM Security AppScan Standard が実行した Web アプリケーション・セキュリティー・スキャンの結果が含まれています。</item>
+    <item id="testTechnicalDescriptionColon">技術的な説明:</item>
+    <item id="variant">バリアント</item>
+    <item id="appScanSeverity">AppScan の重大度</item>
+    <item id="FilteredUrl.RequestMethod">HTTP 要求メソッド</item>
+    <item id="issuesDetectedAcrossRegulation">規制中の {0} セクションで検出された問題:</item>
+    <item id="totalIssuesInReportColon">レポートに含まれているセキュリティー問題の合計:</item>
+    <item id="tableOfContents">目次</item>
+    <item id="introductionAndObjectives">はじめに / 目的</item>
+    <item id="FilteredUrl.DepthLimit">深さ制限</item>
+    <item id="detectedParameters">追跡されたパラメーター:</item>
+    <item id="originalRequestsAndResponsesColon">オリジナルの要求と応答:</item>
+    <item id="sessionVerifierEnabled">セッション内検出:</item>
+    <item id="FilteredUrl.TotVisitedLinksLimit">合計リンク・アクセス数の制限</item>
+    <item id="newIssues">新規の問題</item>
+    <item id="TotalSecurityIssues">セキュリティー問題の合計</item>
+    <item id="introduction">はじめに</item>
+    <item id="dictionarySessionManagementModeRecorded">記録されたログイン</item>
+    <item id="scanTargetStartedColon">ターゲット・スキャンが開始されました:</item>
+    <item id="baseScan">ベース・スキャン</item>
+    <item id="testResponseFirstLabel">テスト応答 (最初)</item>
+    <item id="causesColon">原因:</item>
+    <item id="sectionViolation">違反セクション</item>
+    <item id="critical">クリティカル</item>
+    <item id="portColon">ポート</item>
+    <item id="validLoginLabel">有効なログイン</item>
+    <item id="severityColon">重大度:</item>
+    <item id="parameter">パラメーター</item>
+    <item id="severity">重大度</item>
+    <item id="applicationData">アプリケーション・データ</item>
+    <item id="testRequestLabel">テスト要求:</item>
+    <item id="fixRecommendations">推奨される修正</item>
+    <item id="reasoningColon">論拠:</item>
+    <item id="domain">ドメイン</item>
+    <item id="dotNet">.Net</item>
+    <item id="advisories">アドバイザリー</item>
+    <item id="entity">エンティティー</item>
+    <item id="riskColon">リスク:</item>
+    <item id="createdBySaaS">このレポートは、IBM Application Security Analyzer - Dynamic の以下のセキュリティー・ルールのバージョンによって作成されました。</item>
+    <item id="criticalSeverityIssues">重大度がクリティカルの問題:</item>
+    <item id="ApplicationData.HttpParamType.File">ファイル</item>
+    <item id="ApplicationData.HttpParamType.JSON">JSON</item>
+    <item id="ApplicationData.HttpParamType.Text">テキスト</item>
+    <item id="reportName">総合セキュリティー・レポート</item>
+    <item id="issueTypes">問題のタイプ</item>
+    <item id="regulations">規制</item>
+    <item id="removed">削除済み</item>
+    <item id="queryparameter">クエリー・パラメーター</item>
+    <item id="FilteredUrl.ImageContext">イメージ・コンテキスト</item>
+    <item id="removedLabel">削除済み</item>
+    <item id="medium">中</item>
+    <item id="method">方法</item>
+    <item id="FilteredUrl.MaxLengthExceeded">URL 長制限</item>
+    <item id="sslVersion">SSL バージョン</item>
+    <item id="dictionaryTestPolicyModified">(変更済み)</item>
+    <item id="sections">セクション</item>
+    <item id="causes">原因</item>
+    <item id="cookie">Cookie</item>
+    <item id="header">ヘッダー</item>
+    <item id="GeneralInformation.Unknown">不明</item>
+    <item id="FilteredUrl.RegExp">一般的な正規表現</item>
+    <item id="dictionaryDisabled">無効</item>
+    <item id="affectedURLs">脆弱性のある URL</item>
+    <item id="manipulatedFromColon">操作元:</item>
+    <item id="issueDistributionByScan">スキャンごとの問題分布</item>
+    <item id="threat">脅威</item>
+    <item id="securityRisks">セキュリティー・リスク</item>
+    <item id="securityRisksColon">セキュリティー・リスク:</item>
+    <item id="requestedURL">要求 URL</item>
+    <item id="testRequestsResponsesColon">テスト要求と応答:</item>
+    <item id="numberOfAffectedIssues">これは現在、下のものと同一 - 削除が必要</item>
+    <item id="requestLabel">要求</item>
+    <item id="trialVersionHeader">以下にご注意ください:</item>
+    <item id="remediationTask">修復タスク</item>
+    <item id="detailedSummary">詳細情報</item>
+    <item id="issuesByIssueType">問題のタイプ別にソートされた問題</item>
+    <item id="remainingUrls">残りの URL</item>
+    <item id="cipherSuiteName">名前</item>
+    <item id="toColon">操作先:</item>
+    <item id="FilteredUrl.NestingLimit">ネスト制限</item>
+    <item id="testResponseLabel">テスト応答</item>
+    <item id="removedFromRequestColon">要求から削除されました:</item>
+    <item id="FilteredUrl.BodySimilar">類似した本文</item>
+    <item id="originalRequestLabel">オリジナルの要求</item>
+    <item id="body">本文</item>
+    <item id="code">コード</item>
+    <item id="high">高</item>
+    <item id="name">名前</item>
+    <item id="open">オープン</item>
+    <item id="type">タイプ</item>
+    <item id="j2ee">J2EE</item>
+    <item id="path">パス</item>
+    <item id="risk">リスク</item>
+    <item id="sectionViolationByIssue">問題別のセクション違反</item>
+    <item id="dictionaryFalse">偽</item>
+    <item id="GeneralInformation.Any">任意</item>
+    <item id="recordedRequestSequence">ログイン手順:</item>
+    <item id="willFix">このタスクで修正される問題のタイプ</item>
+    <item id="reason">理由</item>
+  </dictionary>
+  <layout>
+    <rules-number>13072</rules-number>
+    <title>
+      <item>Web アプリケーション・レポート</item>
+    </title>
+    <report-type>セキュリティー・レポート</report-type>
+    <description>
+      <item>このレポートには、Web アプリケーションに関する重要なセキュリティー情報が含まれています。</item>
+    </description>
+    <header />
+    <footer />
+    <include-date>1</include-date>
+    <report-date-and-time>2018/01/24 2:03:35</report-date-and-time>
+    <company-logo-path />
+    <additional-logo-path />
+    <margins>1</margins>
+    <node-path />
+    <coverage>SaasTrialReport</coverage>
+  </layout>
+  <scan-information>
+    <scan-name>gvt_2018-01-24_16-46-00</scan-name>
+    <scan-file-name />
+    <scan-date-and-time>2018年1月24日 7:57:16</scan-date-and-time>
+    <scan-date-and-time-iso>2018-01-24T01:57:16Z</scan-date-and-time-iso>
+    <product-name>IBM Security AppScan Standard</product-name>
+    <product-version>9.0.3.8</product-version>
+    <engine-version>1.1.306.0</engine-version>
+  </scan-information>
+  <scan-configuration>
+    <login-settings-group>
+      <allow-concurrent-logins />
+      <enable-Jsx-In-login-replay />
+      <session-management-mode>dictionaryNone</session-management-mode>
+      <session-verifier-enabled />
+      <session-verifier-pattern />
+      <tracked-cookies />
+      <tracked-parameters />
+      <recorded-urls-sequence />
+    </login-settings-group>
+    <test-policy-name> (Staging)</test-policy-name>
+    <starting-url>https://demo.testfire.net/?mode=demo</starting-url>
+    <link-limit-state>dictionaryDisabled</link-limit-state>
+    <link-limit>500</link-limit>
+    <depth-limit-state>dictionaryEnabled</depth-limit-state>
+    <depth-limit>10</depth-limit>
+    <path-limit-state>dictionaryDisabled</path-limit-state>
+    <path-limit>500</path-limit>
+    <form-filler-state>dictionaryEnabled</form-filler-state>
+    <java-script-links-execution>dictionaryEnabled</java-script-links-execution>
+    <java-script-links-extraction>dictionaryEnabled</java-script-links-extraction>
+    <flash-execution-state>dictionaryDisabled</flash-execution-state>
+    <flash-links-extraction-state>dictionaryDisabled</flash-links-extraction-state>
+    <additional-servers-and-domains />
+    <multi-phase-operation-names />
+    <path-filters>
+      <path-filter>
+        <path>.*/deleteweb.aspx</path>
+        <type>Exclude</type>
+        <matching>True</matching>
+      </path-filter>
+    </path-filters>
+    <glass-box-agent>dictionaryNone</glass-box-agent>
+    <glass-box-in-explore-stage>dictionaryDisabled</glass-box-in-explore-stage>
+    <glass-box-in-test-stage>dictionaryDisabled</glass-box-in-test-stage>
+    <custom-proxy-settings>dictionaryDisabled</custom-proxy-settings>
+    <use-ie-proxy-settings>dictionaryDisabled</use-ie-proxy-settings>
+    <proxy-settings-ip-address />
+    <proxy-settings-port>8080</proxy-settings-port>
+    <scanned-hosts>
+      <item>
+        <host>demo.testfire.net</host>
+        <port>0</port>
+        <operating-system>Win32</operating-system>
+        <web-server>IIS</web-server>
+        <application-server>GeneralInformation.Any</application-server>
+      </item>
+    </scanned-hosts>
+  </scan-configuration>
+  <scan-summary>
+    <scan-Duration>0:6</scan-Duration>
+    <explore-phases>
+      <scan-phase>
+        <DurationTicks>1813629736</DurationTicks>
+        <PhaseIndex>0</PhaseIndex>
+      </scan-phase>
+      <scan-phase>
+        <DurationTicks>169885089</DurationTicks>
+        <PhaseIndex>1</PhaseIndex>
+      </scan-phase>
+    </explore-phases>
+    <test-phases>
+      <scan-phase>
+        <DurationTicks>891603385</DurationTicks>
+        <PhaseIndex>0</PhaseIndex>
+      </scan-phase>
+      <scan-phase>
+        <DurationTicks>899834354</DurationTicks>
+        <PhaseIndex>1</PhaseIndex>
+      </scan-phase>
+    </test-phases>
+  </scan-summary>
+  <issue-type-group>
+    <item id="DOMXSS1" count="1" maxIssueSeverity="3">
+      <name>DOM ベースのクロスサイト・スクリプティング</name>
+      <cve />
+      <cwe>79</cwe>
+      <xfid>6784</xfid>
+      <remediation>
+        <ref>fix_58915</ref>
+      </remediation>
+      <advisory>
+        <ref>DOMXSS1</ref>
+      </advisory>
+      <threat-class>
+        <ref>catCrossSiteScripting</ref>
+      </threat-class>
+      <fix-recommendation>
+        <ref>DOMXSS1</ref>
+      </fix-recommendation>
+      <causes>
+        <ref>Cause_0</ref>
+      </causes>
+      <security-risks>
+        <ref>userImpersonation</ref>
+      </security-risks>
+      <affected-products>
+        <ref>0</ref>
+      </affected-products>
+    </item>
+    <item id="attSqlInjectionChecks" count="2" maxIssueSeverity="3">
+      <name>SQL インジェクション</name>
+      <cve />
+      <cwe>89</cwe>
+      <xfid>8783</xfid>
+      <remediation>
+        <ref>fix_52000</ref>
+      </remediation>
+      <advisory>
+        <ref>attSqlInjectionChecks</ref>
+      </advisory>
+      <threat-class>
+        <ref>catSQLInjection</ref>
+      </threat-class>
+      <fix-recommendation>
+        <ref>attSqlInjectionChecks</ref>
+      </fix-recommendation>
+      <causes>
+        <ref>Cause_1</ref>
+      </causes>
+      <security-risks>
+        <ref>databaseManipulations</ref>
+      </security-risks>
+      <affected-products>
+        <ref>0</ref>
+      </affected-products>
+    </item>
+    <item id="attCrossSiteScripting" count="5" maxIssueSeverity="3">
+      <name>クロスサイト・スクリプティング</name>
+      <cve />
+      <cwe>79</cwe>
+      <xfid>6784</xfid>
+      <remediation>
+        <ref>fix_52000</ref>
+      </remediation>
+      <advisory>
+        <ref>attCrossSiteScripting</ref>
+      </advisory>
+      <threat-class>
+        <ref>catCrossSiteScripting</ref>
+      </threat-class>
+      <fix-recommendation>
+        <ref>attCrossSiteScripting</ref>
+      </fix-recommendation>
+      <causes>
+        <ref>Cause_1</ref>
+      </causes>
+      <security-risks>
+        <ref>userImpersonation</ref>
+      </security-risks>
+      <affected-products>
+        <ref>0</ref>
+      </affected-products>
+    </item>
+    <item id="attPoodleCheck" count="1" maxIssueSeverity="2">
+      <name>Padding Oracle On Downgraded Legacy Encryption (POODLE とも呼ばれる)</name>
+      <cve>CVE-2014-3566</cve>
+      <cwe>200</cwe>
+      <xfid>97013</xfid>
+      <remediation>
+        <ref>fix_61740</ref>
+      </remediation>
+      <advisory>
+        <ref>attPoodleCheck</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <fix-recommendation>
+        <ref>attPoodleCheck</ref>
+      </fix-recommendation>
+      <causes>
+        <ref>Cause_2</ref>
+      </causes>
+      <security-risks>
+        <ref>sensitiveInformation</ref>
+      </security-risks>
+      <affected-products>
+        <ref>1</ref>
+      </affected-products>
+    </item>
+    <item id="RC4CipherSuites" count="1" maxIssueSeverity="2">
+      <name>RC4 暗号スイートが検出されました</name>
+      <cve />
+      <cwe>327</cwe>
+      <xfid>89156</xfid>
+      <remediation>
+        <ref>fix_61754</ref>
+      </remediation>
+      <advisory>
+        <ref>RC4CipherSuites</ref>
+      </advisory>
+      <threat-class>
+        <ref>catServerMisconfiguration</ref>
+      </threat-class>
+      <fix-recommendation>
+        <ref>RC4CipherSuites</ref>
+      </fix-recommendation>
+      <causes>
+        <ref>Cause_2</ref>
+      </causes>
+      <security-risks>
+        <ref>userImpersonation</ref>
+      </security-risks>
+      <affected-products>
+        <ref>0</ref>
+      </affected-products>
+    </item>
+    <item id="attDirectoryGuessing" count="1" maxIssueSeverity="2">
+      <name>ディレクトリーの一覧作成</name>
+      <cve />
+      <cwe>548</cwe>
+      <xfid>52580</xfid>
+      <remediation>
+        <ref>fix_50040</ref>
+      </remediation>
+      <advisory>
+        <ref>attDirectoryGuessing</ref>
+      </advisory>
+      <threat-class>
+        <ref>catDirectoryIndexing</ref>
+      </threat-class>
+      <fix-recommendation>
+        <ref>attDirectoryGuessing</ref>
+      </fix-recommendation>
+      <causes>
+        <ref>Cause_3</ref>
+      </causes>
+      <security-risks>
+        <ref>directoryListing</ref>
+      </security-risks>
+      <affected-products>
+        <ref>0</ref>
+      </affected-products>
+    </item>
+    <item id="phishingInFrames" count="2" maxIssueSeverity="2">
+      <name>フレームからのフィッシング</name>
+      <cve />
+      <cwe>79</cwe>
+      <xfid>52829</xfid>
+      <remediation>
+        <ref>fix_52000</ref>
+      </remediation>
+      <advisory>
+        <ref>phishingInFrames</ref>
+      </advisory>
+      <threat-class>
+        <ref>catContentSpoofing</ref>
+      </threat-class>
+      <fix-recommendation>
+        <ref>phishingInFrames</ref>
+      </fix-recommendation>
+      <causes>
+        <ref>Cause_1</ref>
+      </causes>
+      <security-risks>
+        <ref>phishing</ref>
+      </security-risks>
+      <affected-products>
+        <ref>0</ref>
+      </affected-products>
+    </item>
+    <item id="attLinkInjection" count="2" maxIssueSeverity="2">
+      <name>リンク・インジェクション (クロスサイト・リクエスト・フォージェリーの助長)</name>
+      <cve />
+      <cwe>74</cwe>
+      <xfid>6784</xfid>
+      <remediation>
+        <ref>fix_52000</ref>
+      </remediation>
+      <advisory>
+        <ref>attLinkInjection</ref>
+      </advisory>
+      <threat-class>
+        <ref>catContentSpoofing</ref>
+      </threat-class>
+      <fix-recommendation>
+        <ref>attLinkInjection</ref>
+      </fix-recommendation>
+      <causes>
+        <ref>Cause_1</ref>
+      </causes>
+      <security-risks>
+        <ref>phishing</ref>
+        <ref>userImpersonation</ref>
+        <ref>siteDefacement</ref>
+      </security-risks>
+      <affected-products>
+        <ref>0</ref>
+      </affected-products>
+    </item>
+    <item id="DeprecatedSSL" count="1" maxIssueSeverity="2">
+      <name>推奨されない SSL バージョンがサポートされています</name>
+      <cve />
+      <cwe>327</cwe>
+      <xfid>0</xfid>
+      <remediation>
+        <ref>fix_61030</ref>
+      </remediation>
+      <advisory>
+        <ref>DeprecatedSSL</ref>
+      </advisory>
+      <threat-class>
+        <ref>catServerMisconfiguration</ref>
+      </threat-class>
+      <fix-recommendation>
+        <ref>DeprecatedSSL</ref>
+      </fix-recommendation>
+      <causes>
+        <ref>Cause_2</ref>
+      </causes>
+      <security-risks>
+        <ref>userImpersonation</ref>
+      </security-risks>
+      <affected-products>
+        <ref>0</ref>
+      </affected-products>
+    </item>
+    <item id="attRespCookieNotSecureSSL" count="3" maxIssueSeverity="2">
+      <name>暗号化されたセッション (SSL) Cookie のセキュア属性が消失</name>
+      <cve />
+      <cwe>614</cwe>
+      <xfid>52696</xfid>
+      <remediation>
+        <ref>fix_52740</ref>
+      </remediation>
+      <advisory>
+        <ref>attRespCookieNotSecureSSL</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <fix-recommendation>
+        <ref>attRespCookieNotSecureSSL</ref>
+      </fix-recommendation>
+      <causes>
+        <ref>Cause_4</ref>
+      </causes>
+      <security-risks>
+        <ref>unsecureCookieInSSL</ref>
+      </security-risks>
+      <affected-products>
+        <ref>2</ref>
+      </affected-products>
+    </item>
+    <item id="ContentSecurityPolicy" count="5" maxIssueSeverity="1">
+      <name>Content-Security-Policy ヘッダーが欠落しています</name>
+      <cve />
+      <cwe>200</cwe>
+      <xfid>0</xfid>
+      <remediation>
+        <ref>fix_61770</ref>
+      </remediation>
+      <advisory>
+        <ref>ContentSecurityPolicy</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <fix-recommendation>
+        <ref>ContentSecurityPolicy</ref>
+      </fix-recommendation>
+      <causes>
+        <ref>Cause_5</ref>
+      </causes>
+      <security-risks>
+        <ref>sensitiveInformation</ref>
+        <ref>phishing</ref>
+      </security-risks>
+      <affected-products>
+        <ref>2</ref>
+      </affected-products>
+    </item>
+    <item id="HSTS" count="5" maxIssueSeverity="1">
+      <name>HTTP Strict-Transport-Security ヘッダーが欠落しています</name>
+      <cve />
+      <cwe>200</cwe>
+      <xfid>0</xfid>
+      <remediation>
+        <ref>fix_61750</ref>
+      </remediation>
+      <advisory>
+        <ref>HSTS</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <fix-recommendation>
+        <ref>HSTS</ref>
+      </fix-recommendation>
+      <causes>
+        <ref>Cause_5</ref>
+      </causes>
+      <security-risks>
+        <ref>sensitiveInformation</ref>
+        <ref>phishing</ref>
+      </security-risks>
+      <affected-products>
+        <ref>0</ref>
+      </affected-products>
+    </item>
+    <item id="MicrosoftASPNETDebuggingEnabled" count="2" maxIssueSeverity="1">
+      <name>Microsoft ASP.NET のデバッグが有効</name>
+      <cve />
+      <cwe>200</cwe>
+      <xfid>949</xfid>
+      <remediation>
+        <ref>fix_59140</ref>
+      </remediation>
+      <advisory>
+        <ref>MicrosoftASPNETDebuggingEnabled</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <fix-recommendation>
+        <ref>MicrosoftASPNETDebuggingEnabled</ref>
+      </fix-recommendation>
+      <causes>
+        <ref>Cause_5</ref>
+      </causes>
+      <security-risks>
+        <ref>sensitiveInformation</ref>
+      </security-risks>
+      <affected-products>
+        <ref>3</ref>
+      </affected-products>
+    </item>
+    <item id="GETParamOverSSL" count="5" maxIssueSeverity="1">
+      <name>SSL リクエストのクエリー・パラメーター</name>
+      <cve />
+      <cwe>598</cwe>
+      <xfid>52845</xfid>
+      <remediation>
+        <ref>fix_52720</ref>
+      </remediation>
+      <advisory>
+        <ref>GETParamOverSSL</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <fix-recommendation>
+        <ref>GETParamOverSSL</ref>
+      </fix-recommendation>
+      <causes>
+        <ref>Cause_6</ref>
+      </causes>
+      <security-risks>
+        <ref>sensitiveNotOverSSL</ref>
+      </security-risks>
+      <affected-products>
+        <ref>2</ref>
+      </affected-products>
+    </item>
+    <item id="ContentTypeOptions" count="5" maxIssueSeverity="1">
+      <name>X-Content-Type-Options ヘッダーが欠落しています</name>
+      <cve />
+      <cwe>200</cwe>
+      <xfid>0</xfid>
+      <remediation>
+        <ref>fix_61767</ref>
+      </remediation>
+      <advisory>
+        <ref>ContentTypeOptions</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <fix-recommendation>
+        <ref>ContentTypeOptions</ref>
+      </fix-recommendation>
+      <causes>
+        <ref>Cause_5</ref>
+      </causes>
+      <security-risks>
+        <ref>sensitiveInformation</ref>
+        <ref>phishing</ref>
+      </security-risks>
+      <affected-products>
+        <ref>2</ref>
+      </affected-products>
+    </item>
+    <item id="XSSProtectionHeader" count="5" maxIssueSeverity="1">
+      <name>X-XSS-Protection ヘッダーが欠落しています</name>
+      <cve />
+      <cwe>200</cwe>
+      <xfid>0</xfid>
+      <remediation>
+        <ref>fix_61765</ref>
+      </remediation>
+      <advisory>
+        <ref>XSSProtectionHeader</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <fix-recommendation>
+        <ref>XSSProtectionHeader</ref>
+      </fix-recommendation>
+      <causes>
+        <ref>Cause_5</ref>
+      </causes>
+      <security-risks>
+        <ref>sensitiveInformation</ref>
+        <ref>phishing</ref>
+      </security-risks>
+      <affected-products>
+        <ref>2</ref>
+      </affected-products>
+    </item>
+    <item id="attCachedSSL" count="10" maxIssueSeverity="1">
+      <name>キャッシュ可能な SSL ページの発見</name>
+      <cve />
+      <cwe>525</cwe>
+      <xfid>52512</xfid>
+      <remediation>
+        <ref>fix_60210</ref>
+      </remediation>
+      <advisory>
+        <ref>attCachedSSL</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <fix-recommendation>
+        <ref>attCachedSSL</ref>
+      </fix-recommendation>
+      <causes>
+        <ref>Cause_7</ref>
+      </causes>
+      <security-risks>
+        <ref>sensitiveInformation</ref>
+      </security-risks>
+      <affected-products>
+        <ref>0</ref>
+      </affected-products>
+    </item>
+    <item id="GD_DirListing" count="1" maxIssueSeverity="1">
+      <name>ディレクトリー一覧作成のパターンを発見</name>
+      <cve />
+      <cwe>548</cwe>
+      <xfid>52581</xfid>
+      <remediation>
+        <ref>fix_50040</ref>
+      </remediation>
+      <advisory>
+        <ref>GD_DirListing</ref>
+      </advisory>
+      <threat-class>
+        <ref>catDirectoryIndexing</ref>
+      </threat-class>
+      <fix-recommendation>
+        <ref>GD_DirListing</ref>
+      </fix-recommendation>
+      <causes>
+        <ref>Cause_3</ref>
+      </causes>
+      <security-risks>
+        <ref>directoryListing</ref>
+      </security-risks>
+      <affected-products>
+        <ref>0</ref>
+      </affected-products>
+    </item>
+    <item id="GV_SQLErr" count="4" maxIssueSeverity="1">
+      <name>データベース・エラー・パターンを検出</name>
+      <cve />
+      <cwe>209</cwe>
+      <xfid>52577</xfid>
+      <remediation>
+        <ref>fix_52000</ref>
+      </remediation>
+      <advisory>
+        <ref>GV_SQLErr</ref>
+      </advisory>
+      <threat-class>
+        <ref>catSQLInjection</ref>
+      </threat-class>
+      <fix-recommendation>
+        <ref>GV_SQLErr</ref>
+      </fix-recommendation>
+      <causes>
+        <ref>Cause_1</ref>
+      </causes>
+      <security-risks>
+        <ref>databaseManipulations</ref>
+      </security-risks>
+      <affected-products>
+        <ref>0</ref>
+      </affected-products>
+    </item>
+    <item id="GD_autocompleteInForm" count="1" maxIssueSeverity="1">
+      <name>パスワード・フィールドで、HTML の autocomplete 属性が無効になっていません</name>
+      <cve />
+      <cwe>522</cwe>
+      <xfid>85989</xfid>
+      <remediation>
+        <ref>fix_61640</ref>
+      </remediation>
+      <advisory>
+        <ref>GD_autocompleteInForm</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <fix-recommendation>
+        <ref>GD_autocompleteInForm</ref>
+      </fix-recommendation>
+      <causes>
+        <ref>Cause_5</ref>
+      </causes>
+      <security-risks>
+        <ref>authBypass</ref>
+      </security-risks>
+      <affected-products>
+        <ref>4</ref>
+      </affected-products>
+    </item>
+    <item id="bodyParamsInQuery" count="2" maxIssueSeverity="1">
+      <name>ボディ・パラメーターをクエリーで送信</name>
+      <cve />
+      <cwe>200</cwe>
+      <xfid>0</xfid>
+      <remediation>
+        <ref>fix_61757</ref>
+      </remediation>
+      <advisory>
+        <ref>bodyParamsInQuery</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <fix-recommendation>
+        <ref>bodyParamsInQuery</ref>
+      </fix-recommendation>
+      <causes>
+        <ref>Cause_5</ref>
+      </causes>
+      <security-risks>
+        <ref>sensitiveInformation</ref>
+        <ref>phishing</ref>
+      </security-risks>
+      <affected-products>
+        <ref>0</ref>
+      </affected-products>
+    </item>
+    <item id="attHttpsToHttp" count="5" maxIssueSeverity="1">
+      <name>暗号化が実行されていない</name>
+      <cve />
+      <cwe>311</cwe>
+      <xfid>52586</xfid>
+      <remediation>
+        <ref>fix_52721</ref>
+      </remediation>
+      <advisory>
+        <ref>attHttpsToHttp</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <fix-recommendation>
+        <ref>attHttpsToHttp</ref>
+      </fix-recommendation>
+      <causes>
+        <ref>Cause_8</ref>
+      </causes>
+      <security-risks>
+        <ref>sensitiveNotOverSSL</ref>
+      </security-risks>
+      <affected-products>
+        <ref>2</ref>
+      </affected-products>
+    </item>
+    <item id="attDirectoryFound" count="3" maxIssueSeverity="1">
+      <name>非表示のディレクトリーを検出</name>
+      <cve />
+      <cwe>200</cwe>
+      <xfid>52599</xfid>
+      <remediation>
+        <ref>fix_50330</ref>
+      </remediation>
+      <advisory>
+        <ref>attDirectoryFound</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <fix-recommendation>
+        <ref>attDirectoryFound</ref>
+      </fix-recommendation>
+      <causes>
+        <ref>Cause_2</ref>
+      </causes>
+      <security-risks>
+        <ref>siteStructureRevealed</ref>
+      </security-risks>
+      <affected-products>
+        <ref>0</ref>
+      </affected-products>
+    </item>
+    <item id="attSensitiveInHtmlComments" count="1" maxIssueSeverity="0">
+      <name>HTML コメントによる秘密情報の開示</name>
+      <cve />
+      <cwe>615</cwe>
+      <xfid>52601</xfid>
+      <remediation>
+        <ref>fix_50750</ref>
+      </remediation>
+      <advisory>
+        <ref>attSensitiveInHtmlComments</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <fix-recommendation>
+        <ref>attSensitiveInHtmlComments</ref>
+      </fix-recommendation>
+      <causes>
+        <ref>Cause_9</ref>
+      </causes>
+      <security-risks>
+        <ref>sensitiveInformation</ref>
+      </security-risks>
+      <affected-products>
+        <ref>0</ref>
+      </affected-products>
+    </item>
+    <item id="SHA1CipherSuites" count="1" maxIssueSeverity="0">
+      <name>SHA-1 暗号スイートが検出されました</name>
+      <cve />
+      <cwe>327</cwe>
+      <xfid>0</xfid>
+      <remediation>
+        <ref>fix_61754</ref>
+      </remediation>
+      <advisory>
+        <ref>SHA1CipherSuites</ref>
+      </advisory>
+      <threat-class>
+        <ref>catServerMisconfiguration</ref>
+      </threat-class>
+      <fix-recommendation>
+        <ref>SHA1CipherSuites</ref>
+      </fix-recommendation>
+      <causes>
+        <ref>Cause_2</ref>
+      </causes>
+      <security-risks>
+        <ref>userImpersonation</ref>
+      </security-risks>
+      <affected-products>
+        <ref>0</ref>
+      </affected-products>
+    </item>
+    <item id="attUndefinedState" count="5" maxIssueSeverity="0">
+      <name>アプリケーション・エラー</name>
+      <cve />
+      <cwe>550</cwe>
+      <xfid>52502</xfid>
+      <remediation>
+        <ref>fix_50300</ref>
+      </remediation>
+      <advisory>
+        <ref>attUndefinedState</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <fix-recommendation>
+        <ref>attUndefinedState</ref>
+      </fix-recommendation>
+      <causes>
+        <ref>Cause_10</ref>
+        <ref>Cause_11</ref>
+      </causes>
+      <security-risks>
+        <ref>debugErrorInformation</ref>
+      </security-risks>
+      <affected-products>
+        <ref>0</ref>
+      </affected-products>
+    </item>
+    <item id="ApplicationTestScriptDetected" count="1" maxIssueSeverity="0">
+      <name>アプリケーション・テスト・スクリプトを検知</name>
+      <cve />
+      <cwe>531</cwe>
+      <xfid>52497</xfid>
+      <remediation>
+        <ref>fix_54850</ref>
+      </remediation>
+      <advisory>
+        <ref>ApplicationTestScriptDetected</ref>
+      </advisory>
+      <threat-class>
+        <ref>catPredictableResourceLocation</ref>
+      </threat-class>
+      <fix-recommendation>
+        <ref>ApplicationTestScriptDetected</ref>
+      </fix-recommendation>
+      <causes>
+        <ref>Cause_12</ref>
+      </causes>
+      <security-risks>
+        <ref>tempScriptDownload</ref>
+      </security-risks>
+      <affected-products />
+    </item>
+    <item id="GD_PathDisclosure" count="1" maxIssueSeverity="0">
+      <name>サーバーのパス開示の可能性のあるパターンを発見</name>
+      <cve />
+      <cwe>200</cwe>
+      <xfid>52839</xfid>
+      <remediation>
+        <ref>fix_60510</ref>
+      </remediation>
+      <advisory>
+        <ref>GD_PathDisclosure</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <fix-recommendation>
+        <ref>GD_PathDisclosure</ref>
+      </fix-recommendation>
+      <causes>
+        <ref>Cause_13</ref>
+      </causes>
+      <security-risks>
+        <ref>pathDisclosure</ref>
+      </security-risks>
+      <affected-products>
+        <ref>0</ref>
+      </affected-products>
+    </item>
+    <item id="GD_EmailAddress" count="1" maxIssueSeverity="0">
+      <name>電子メール・アドレス・パターンを発見</name>
+      <cve />
+      <cwe>359</cwe>
+      <xfid>52584</xfid>
+      <remediation>
+        <ref>fix_60260</ref>
+      </remediation>
+      <advisory>
+        <ref>GD_EmailAddress</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <fix-recommendation>
+        <ref>GD_EmailAddress</ref>
+      </fix-recommendation>
+      <causes>
+        <ref>Cause_5</ref>
+      </causes>
+      <security-risks>
+        <ref>sensitiveInformation</ref>
+      </security-risks>
+      <affected-products>
+        <ref>0</ref>
+      </affected-products>
+    </item>
+  </issue-type-group>
+  <threat-class-group>
+    <item id="catCrossSiteScripting" href="http://projects.webappsec.org/Cross-Site+Scripting">クロスサイト・スクリプティング</item>
+    <item id="catSQLInjection" href="http://projects.webappsec.org/SQL-Injection">SQL インジェクション</item>
+    <item id="catInformationLeakage" href="http://projects.webappsec.org/Information-Leakage">情報漏えい</item>
+    <item id="catServerMisconfiguration" href="http://projects.webappsec.org/Server-Misconfiguration">正しくないサーバー構成</item>
+    <item id="catDirectoryIndexing" href="http://projects.webappsec.org/Directory-Indexing">ディレクトリー索引付け</item>
+    <item id="catContentSpoofing" href="http://projects.webappsec.org/Content-Spoofing">コンテンツ・スプーフィング</item>
+    <item id="catPredictableResourceLocation" href="http://projects.webappsec.org/Predictable-Resource-Location">予測可能なリソースの位置</item>
+  </threat-class-group>
+  <issue-group total="82">
+    <item id="-2710637194449194496">
+      <severity>medium</severity>
+      <severity-id>2</severity-id>
+      <cvss-score>6.4</cvss-score>
+      <cwe>327</cwe>
+      <issue-type>
+        <ref>DeprecatedSSL</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_61030</ref>
+      </remediation>
+      <advisory>
+        <ref>DeprecatedSSL</ref>
+      </advisory>
+      <threat-class>
+        <ref>catServerMisconfiguration</ref>
+      </threat-class>
+      <entity>
+        <ref>7089695691196187648</ref>
+      </entity>
+      <url>
+        <ref>-1930822699</ref>
+      </url>
+      <security-risks>
+        <ref>userImpersonation</ref>
+      </security-risks>
+      <cause-id>
+        <ref>insecureWebServerConfiguration</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="-7046883675708506112">
+      <severity>low</severity>
+      <severity-id>1</severity-id>
+      <cvss-score>5.0</cvss-score>
+      <cwe>200</cwe>
+      <issue-type>
+        <ref>ContentTypeOptions</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_61767</ref>
+      </remediation>
+      <advisory>
+        <ref>ContentTypeOptions</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <entity>
+        <ref>-7017794822322744576</ref>
+      </entity>
+      <url>
+        <ref>-598681142</ref>
+      </url>
+      <security-risks>
+        <ref>sensitiveInformation</ref>
+        <ref>phishing</ref>
+      </security-risks>
+      <cause-id>
+        <ref>insecureWebAppConfiguration</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="6103806692212336896">
+      <severity>high</severity>
+      <severity-id>3</severity-id>
+      <cvss-score>7.5</cvss-score>
+      <cwe>79</cwe>
+      <issue-type>
+        <ref>DOMXSS1</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_58915</ref>
+      </remediation>
+      <advisory>
+        <ref>DOMXSS1</ref>
+      </advisory>
+      <threat-class>
+        <ref>catCrossSiteScripting</ref>
+      </threat-class>
+      <entity>
+        <ref>2137580368336897280</ref>
+      </entity>
+      <url>
+        <ref>865016179</ref>
+      </url>
+      <security-risks>
+        <ref>userImpersonation</ref>
+      </security-risks>
+      <cause-id>
+        <ref>usOfClientSideLogic</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="3167709623999916544">
+      <severity>low</severity>
+      <severity-id>1</severity-id>
+      <cvss-score>5.0</cvss-score>
+      <cwe>200</cwe>
+      <issue-type>
+        <ref>bodyParamsInQuery</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_61757</ref>
+      </remediation>
+      <advisory>
+        <ref>bodyParamsInQuery</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <entity>
+        <ref>-6556938534653437440</ref>
+      </entity>
+      <url>
+        <ref>152564768</ref>
+      </url>
+      <security-risks>
+        <ref>sensitiveInformation</ref>
+        <ref>phishing</ref>
+      </security-risks>
+      <cause-id>
+        <ref>insecureWebAppConfiguration</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="8046235090985615616">
+      <severity>medium</severity>
+      <severity-id>2</severity-id>
+      <cvss-score>6.4</cvss-score>
+      <cwe>200</cwe>
+      <issue-type>
+        <ref>attPoodleCheck</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_61740</ref>
+      </remediation>
+      <advisory>
+        <ref>attPoodleCheck</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <entity>
+        <ref>7089695691196187648</ref>
+      </entity>
+      <url>
+        <ref>-1930822699</ref>
+      </url>
+      <security-risks>
+        <ref>sensitiveInformation</ref>
+      </security-risks>
+      <cause-id>
+        <ref>insecureWebServerConfiguration</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="-7001112304346128896">
+      <severity>low</severity>
+      <severity-id>1</severity-id>
+      <cvss-score>5.0</cvss-score>
+      <cwe>200</cwe>
+      <issue-type>
+        <ref>ContentTypeOptions</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_61767</ref>
+      </remediation>
+      <advisory>
+        <ref>ContentTypeOptions</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <entity>
+        <ref>1733046179033861888</ref>
+      </entity>
+      <url>
+        <ref>-1930822699</ref>
+      </url>
+      <security-risks>
+        <ref>sensitiveInformation</ref>
+        <ref>phishing</ref>
+      </security-risks>
+      <cause-id>
+        <ref>insecureWebAppConfiguration</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="-5259276234129699584">
+      <severity>low</severity>
+      <severity-id>1</severity-id>
+      <cvss-score>5.0</cvss-score>
+      <cwe>209</cwe>
+      <issue-type>
+        <ref>GV_SQLErr</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_52000</ref>
+      </remediation>
+      <advisory>
+        <ref>GV_SQLErr</ref>
+      </advisory>
+      <threat-class>
+        <ref>catSQLInjection</ref>
+      </threat-class>
+      <entity>
+        <ref>-2879177742401463040</ref>
+      </entity>
+      <url>
+        <ref>152564768</ref>
+      </url>
+      <security-risks>
+        <ref>databaseManipulations</ref>
+      </security-risks>
+      <cause-id>
+        <ref>hazardousCharactersNotSanitized</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="-1631998349595762432">
+      <severity>medium</severity>
+      <severity-id>2</severity-id>
+      <cvss-score>6.4</cvss-score>
+      <cwe>327</cwe>
+      <issue-type>
+        <ref>RC4CipherSuites</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_61754</ref>
+      </remediation>
+      <advisory>
+        <ref>RC4CipherSuites</ref>
+      </advisory>
+      <threat-class>
+        <ref>catServerMisconfiguration</ref>
+      </threat-class>
+      <entity>
+        <ref>7089695691196187648</ref>
+      </entity>
+      <url>
+        <ref>-1930822699</ref>
+      </url>
+      <security-risks>
+        <ref>userImpersonation</ref>
+      </security-risks>
+      <cause-id>
+        <ref>insecureWebServerConfiguration</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="-6924796084733730560">
+      <severity>low</severity>
+      <severity-id>1</severity-id>
+      <cvss-score>5.0</cvss-score>
+      <cwe>209</cwe>
+      <issue-type>
+        <ref>GV_SQLErr</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_52000</ref>
+      </remediation>
+      <advisory>
+        <ref>GV_SQLErr</ref>
+      </advisory>
+      <threat-class>
+        <ref>catSQLInjection</ref>
+      </threat-class>
+      <entity>
+        <ref>7017457843490478080</ref>
+      </entity>
+      <url>
+        <ref>152564768</ref>
+      </url>
+      <security-risks>
+        <ref>databaseManipulations</ref>
+      </security-risks>
+      <cause-id>
+        <ref>hazardousCharactersNotSanitized</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="-3995025922801501440">
+      <severity>informational</severity>
+      <severity-id>0</severity-id>
+      <cvss-score>0.0</cvss-score>
+      <cwe>327</cwe>
+      <issue-type>
+        <ref>SHA1CipherSuites</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_61754</ref>
+      </remediation>
+      <advisory>
+        <ref>SHA1CipherSuites</ref>
+      </advisory>
+      <threat-class>
+        <ref>catServerMisconfiguration</ref>
+      </threat-class>
+      <entity>
+        <ref>7089695691196187648</ref>
+      </entity>
+      <url>
+        <ref>-1930822699</ref>
+      </url>
+      <security-risks>
+        <ref>userImpersonation</ref>
+      </security-risks>
+      <cause-id>
+        <ref>insecureWebServerConfiguration</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="-7280729136373030656">
+      <severity>low</severity>
+      <severity-id>1</severity-id>
+      <cvss-score>5.0</cvss-score>
+      <cwe>525</cwe>
+      <issue-type>
+        <ref>attCachedSSL</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_60210</ref>
+      </remediation>
+      <advisory>
+        <ref>attCachedSSL</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <entity>
+        <ref>-7017794822322744576</ref>
+      </entity>
+      <url>
+        <ref>-598681142</ref>
+      </url>
+      <security-risks>
+        <ref>sensitiveInformation</ref>
+      </security-risks>
+      <cause-id>
+        <ref>SensitiveCache</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="-8757565299353578752">
+      <severity>low</severity>
+      <severity-id>1</severity-id>
+      <cvss-score>5.0</cvss-score>
+      <cwe>525</cwe>
+      <issue-type>
+        <ref>attCachedSSL</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_60210</ref>
+      </remediation>
+      <advisory>
+        <ref>attCachedSSL</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <entity>
+        <ref>-156367571042650880</ref>
+      </entity>
+      <url>
+        <ref>1864287795</ref>
+      </url>
+      <security-risks>
+        <ref>sensitiveInformation</ref>
+      </security-risks>
+      <cause-id>
+        <ref>SensitiveCache</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="-1725262802638711296">
+      <severity>low</severity>
+      <severity-id>1</severity-id>
+      <cvss-score>5.0</cvss-score>
+      <cwe>200</cwe>
+      <issue-type>
+        <ref>ContentSecurityPolicy</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_61770</ref>
+      </remediation>
+      <advisory>
+        <ref>ContentSecurityPolicy</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <entity>
+        <ref>-7017794822322744576</ref>
+      </entity>
+      <url>
+        <ref>-598681142</ref>
+      </url>
+      <security-risks>
+        <ref>sensitiveInformation</ref>
+        <ref>phishing</ref>
+      </security-risks>
+      <cause-id>
+        <ref>insecureWebAppConfiguration</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="-3801797196880135680">
+      <severity>low</severity>
+      <severity-id>1</severity-id>
+      <cvss-score>5.0</cvss-score>
+      <cwe>200</cwe>
+      <issue-type>
+        <ref>ContentSecurityPolicy</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_61770</ref>
+      </remediation>
+      <advisory>
+        <ref>ContentSecurityPolicy</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <entity>
+        <ref>-156367571042650880</ref>
+      </entity>
+      <url>
+        <ref>1864287795</ref>
+      </url>
+      <security-risks>
+        <ref>sensitiveInformation</ref>
+        <ref>phishing</ref>
+      </security-risks>
+      <cause-id>
+        <ref>insecureWebAppConfiguration</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="1274678095767304960">
+      <severity>low</severity>
+      <severity-id>1</severity-id>
+      <cvss-score>5.0</cvss-score>
+      <cwe>200</cwe>
+      <issue-type>
+        <ref>ContentSecurityPolicy</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_61770</ref>
+      </remediation>
+      <advisory>
+        <ref>ContentSecurityPolicy</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <entity>
+        <ref>1733046179033861888</ref>
+      </entity>
+      <url>
+        <ref>-1930822699</ref>
+      </url>
+      <security-risks>
+        <ref>sensitiveInformation</ref>
+        <ref>phishing</ref>
+      </security-risks>
+      <cause-id>
+        <ref>insecureWebAppConfiguration</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="-2929522634309636864">
+      <severity>low</severity>
+      <severity-id>1</severity-id>
+      <cvss-score>5.0</cvss-score>
+      <cwe>200</cwe>
+      <issue-type>
+        <ref>ContentTypeOptions</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_61767</ref>
+      </remediation>
+      <advisory>
+        <ref>ContentTypeOptions</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <entity>
+        <ref>-156367571042650880</ref>
+      </entity>
+      <url>
+        <ref>1864287795</ref>
+      </url>
+      <security-risks>
+        <ref>sensitiveInformation</ref>
+        <ref>phishing</ref>
+      </security-risks>
+      <cause-id>
+        <ref>insecureWebAppConfiguration</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="5469316843673342464">
+      <severity>low</severity>
+      <severity-id>1</severity-id>
+      <cvss-score>5.0</cvss-score>
+      <cwe>200</cwe>
+      <issue-type>
+        <ref>XSSProtectionHeader</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_61765</ref>
+      </remediation>
+      <advisory>
+        <ref>XSSProtectionHeader</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <entity>
+        <ref>-7017794822322744576</ref>
+      </entity>
+      <url>
+        <ref>-598681142</ref>
+      </url>
+      <security-risks>
+        <ref>sensitiveInformation</ref>
+        <ref>phishing</ref>
+      </security-risks>
+      <cause-id>
+        <ref>insecureWebAppConfiguration</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="-672401981155548928">
+      <severity>high</severity>
+      <severity-id>3</severity-id>
+      <cvss-score>9.7</cvss-score>
+      <cwe>89</cwe>
+      <issue-type>
+        <ref>attSqlInjectionChecks</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_52000</ref>
+      </remediation>
+      <advisory>
+        <ref>attSqlInjectionChecks</ref>
+      </advisory>
+      <threat-class>
+        <ref>catSQLInjection</ref>
+      </threat-class>
+      <entity>
+        <ref>7553320665850814720</ref>
+      </entity>
+      <url>
+        <ref>152564768</ref>
+      </url>
+      <security-risks>
+        <ref>databaseManipulations</ref>
+      </security-risks>
+      <cause-id>
+        <ref>hazardousCharactersNotSanitized</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="-1534065533897014016">
+      <severity>low</severity>
+      <severity-id>1</severity-id>
+      <cvss-score>5.0</cvss-score>
+      <cwe>209</cwe>
+      <issue-type>
+        <ref>GV_SQLErr</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_52000</ref>
+      </remediation>
+      <advisory>
+        <ref>GV_SQLErr</ref>
+      </advisory>
+      <threat-class>
+        <ref>catSQLInjection</ref>
+      </threat-class>
+      <entity>
+        <ref>-8758614948486342656</ref>
+      </entity>
+      <url>
+        <ref>152564768</ref>
+      </url>
+      <security-risks>
+        <ref>databaseManipulations</ref>
+      </security-risks>
+      <cause-id>
+        <ref>hazardousCharactersNotSanitized</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="-7673932465951367424">
+      <severity>informational</severity>
+      <severity-id>0</severity-id>
+      <cvss-score>0.0</cvss-score>
+      <cwe>550</cwe>
+      <issue-type>
+        <ref>attUndefinedState</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_50300</ref>
+      </remediation>
+      <advisory>
+        <ref>attUndefinedState</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <entity>
+        <ref>-817847116465103616</ref>
+      </entity>
+      <url>
+        <ref>152564768</ref>
+      </url>
+      <security-risks>
+        <ref>debugErrorInformation</ref>
+      </security-risks>
+      <cause-id>
+        <ref>boundsCheckingOnParamValues</ref>
+        <ref>incorrectDataType</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="-4033142743163930112">
+      <severity>low</severity>
+      <severity-id>1</severity-id>
+      <cvss-score>5.0</cvss-score>
+      <cwe>200</cwe>
+      <issue-type>
+        <ref>XSSProtectionHeader</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_61765</ref>
+      </remediation>
+      <advisory>
+        <ref>XSSProtectionHeader</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <entity>
+        <ref>-156367571042650880</ref>
+      </entity>
+      <url>
+        <ref>1864287795</ref>
+      </url>
+      <security-risks>
+        <ref>sensitiveInformation</ref>
+        <ref>phishing</ref>
+      </security-risks>
+      <cause-id>
+        <ref>insecureWebAppConfiguration</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="4955064292897769984">
+      <severity>low</severity>
+      <severity-id>1</severity-id>
+      <cvss-score>5.0</cvss-score>
+      <cwe>522</cwe>
+      <issue-type>
+        <ref>GD_autocompleteInForm</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_61640</ref>
+      </remediation>
+      <advisory>
+        <ref>GD_autocompleteInForm</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <entity>
+        <ref>-6556938534653437440</ref>
+      </entity>
+      <url>
+        <ref>152564768</ref>
+      </url>
+      <security-risks>
+        <ref>authBypass</ref>
+      </security-risks>
+      <cause-id>
+        <ref>insecureWebAppConfiguration</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="4092205520090807808">
+      <severity>informational</severity>
+      <severity-id>0</severity-id>
+      <cvss-score>0.0</cvss-score>
+      <cwe>200</cwe>
+      <issue-type>
+        <ref>GD_PathDisclosure</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_60510</ref>
+      </remediation>
+      <advisory>
+        <ref>GD_PathDisclosure</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <entity>
+        <ref>-7017794822322744576</ref>
+      </entity>
+      <url>
+        <ref>-598681142</ref>
+      </url>
+      <security-risks>
+        <ref>pathDisclosure</ref>
+      </security-risks>
+      <cause-id>
+        <ref>missingPatchesForThirdPartyProds</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="4051049001839404288">
+      <severity>low</severity>
+      <severity-id>1</severity-id>
+      <cvss-score>5.0</cvss-score>
+      <cwe>200</cwe>
+      <issue-type>
+        <ref>bodyParamsInQuery</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_61757</ref>
+      </remediation>
+      <advisory>
+        <ref>bodyParamsInQuery</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <entity>
+        <ref>6895278740653356544</ref>
+      </entity>
+      <url>
+        <ref>-663406796</ref>
+      </url>
+      <security-risks>
+        <ref>sensitiveInformation</ref>
+        <ref>phishing</ref>
+      </security-risks>
+      <cause-id>
+        <ref>insecureWebAppConfiguration</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="116755007372958976">
+      <severity>low</severity>
+      <severity-id>1</severity-id>
+      <cvss-score>5.0</cvss-score>
+      <cwe>200</cwe>
+      <issue-type>
+        <ref>XSSProtectionHeader</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_61765</ref>
+      </remediation>
+      <advisory>
+        <ref>XSSProtectionHeader</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <entity>
+        <ref>1733046179033861888</ref>
+      </entity>
+      <url>
+        <ref>-1930822699</ref>
+      </url>
+      <security-risks>
+        <ref>sensitiveInformation</ref>
+        <ref>phishing</ref>
+      </security-risks>
+      <cause-id>
+        <ref>insecureWebAppConfiguration</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="-3051324207706554112">
+      <severity>low</severity>
+      <severity-id>1</severity-id>
+      <cvss-score>5.0</cvss-score>
+      <cwe>200</cwe>
+      <issue-type>
+        <ref>HSTS</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_61750</ref>
+      </remediation>
+      <advisory>
+        <ref>HSTS</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <entity>
+        <ref>-156367571042650880</ref>
+      </entity>
+      <url>
+        <ref>1864287795</ref>
+      </url>
+      <security-risks>
+        <ref>sensitiveInformation</ref>
+        <ref>phishing</ref>
+      </security-risks>
+      <cause-id>
+        <ref>insecureWebAppConfiguration</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="-5206040546843522304">
+      <severity>low</severity>
+      <severity-id>1</severity-id>
+      <cvss-score>5.0</cvss-score>
+      <cwe>200</cwe>
+      <issue-type>
+        <ref>HSTS</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_61750</ref>
+      </remediation>
+      <advisory>
+        <ref>HSTS</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <entity>
+        <ref>-7017794822322744576</ref>
+      </entity>
+      <url>
+        <ref>-598681142</ref>
+      </url>
+      <security-risks>
+        <ref>sensitiveInformation</ref>
+        <ref>phishing</ref>
+      </security-risks>
+      <cause-id>
+        <ref>insecureWebAppConfiguration</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="-4377967363632066560">
+      <severity>low</severity>
+      <severity-id>1</severity-id>
+      <cvss-score>5.0</cvss-score>
+      <cwe>200</cwe>
+      <issue-type>
+        <ref>HSTS</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_61750</ref>
+      </remediation>
+      <advisory>
+        <ref>HSTS</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <entity>
+        <ref>1733046179033861888</ref>
+      </entity>
+      <url>
+        <ref>-1930822699</ref>
+      </url>
+      <security-risks>
+        <ref>sensitiveInformation</ref>
+        <ref>phishing</ref>
+      </security-risks>
+      <cause-id>
+        <ref>insecureWebAppConfiguration</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="2976116138312258048">
+      <severity>low</severity>
+      <severity-id>1</severity-id>
+      <cvss-score>5.0</cvss-score>
+      <cwe>200</cwe>
+      <issue-type>
+        <ref>ContentSecurityPolicy</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_61770</ref>
+      </remediation>
+      <advisory>
+        <ref>ContentSecurityPolicy</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <entity>
+        <ref>-9037279660642156032</ref>
+      </entity>
+      <url>
+        <ref>865016179</ref>
+      </url>
+      <security-risks>
+        <ref>sensitiveInformation</ref>
+        <ref>phishing</ref>
+      </security-risks>
+      <cause-id>
+        <ref>insecureWebAppConfiguration</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="-7315577790072914944">
+      <severity>low</severity>
+      <severity-id>1</severity-id>
+      <cvss-score>5.0</cvss-score>
+      <cwe>525</cwe>
+      <issue-type>
+        <ref>attCachedSSL</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_60210</ref>
+      </remediation>
+      <advisory>
+        <ref>attCachedSSL</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <entity>
+        <ref>6209478585070946560</ref>
+      </entity>
+      <url>
+        <ref>-1327348091</ref>
+      </url>
+      <security-risks>
+        <ref>sensitiveInformation</ref>
+      </security-risks>
+      <cause-id>
+        <ref>SensitiveCache</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="6309782170704459520">
+      <severity>low</severity>
+      <severity-id>1</severity-id>
+      <cvss-score>5.0</cvss-score>
+      <cwe>200</cwe>
+      <issue-type>
+        <ref>ContentTypeOptions</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_61767</ref>
+      </remediation>
+      <advisory>
+        <ref>ContentTypeOptions</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <entity>
+        <ref>-9037279660642156032</ref>
+      </entity>
+      <url>
+        <ref>865016179</ref>
+      </url>
+      <security-risks>
+        <ref>sensitiveInformation</ref>
+        <ref>phishing</ref>
+      </security-risks>
+      <cause-id>
+        <ref>insecureWebAppConfiguration</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="-2997231651317345536">
+      <severity>low</severity>
+      <severity-id>1</severity-id>
+      <cvss-score>5.0</cvss-score>
+      <cwe>200</cwe>
+      <issue-type>
+        <ref>XSSProtectionHeader</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_61765</ref>
+      </remediation>
+      <advisory>
+        <ref>XSSProtectionHeader</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <entity>
+        <ref>-9037279660642156032</ref>
+      </entity>
+      <url>
+        <ref>865016179</ref>
+      </url>
+      <security-risks>
+        <ref>sensitiveInformation</ref>
+        <ref>phishing</ref>
+      </security-risks>
+      <cause-id>
+        <ref>insecureWebAppConfiguration</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="3274188334528888832">
+      <severity>high</severity>
+      <severity-id>3</severity-id>
+      <cvss-score>7.5</cvss-score>
+      <cwe>79</cwe>
+      <issue-type>
+        <ref>attCrossSiteScripting</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_52000</ref>
+      </remediation>
+      <advisory>
+        <ref>attCrossSiteScripting</ref>
+      </advisory>
+      <threat-class>
+        <ref>catCrossSiteScripting</ref>
+      </threat-class>
+      <entity>
+        <ref>6895278740653356544</ref>
+      </entity>
+      <url>
+        <ref>-663406796</ref>
+      </url>
+      <security-risks>
+        <ref>userImpersonation</ref>
+      </security-risks>
+      <cause-id>
+        <ref>hazardousCharactersNotSanitized</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="-7005396101835210752">
+      <severity>high</severity>
+      <severity-id>3</severity-id>
+      <cvss-score>7.5</cvss-score>
+      <cwe>79</cwe>
+      <issue-type>
+        <ref>attCrossSiteScripting</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_52000</ref>
+      </remediation>
+      <advisory>
+        <ref>attCrossSiteScripting</ref>
+      </advisory>
+      <threat-class>
+        <ref>catCrossSiteScripting</ref>
+      </threat-class>
+      <entity>
+        <ref>6419376628788214784</ref>
+      </entity>
+      <url>
+        <ref>152564768</ref>
+      </url>
+      <security-risks>
+        <ref>userImpersonation</ref>
+      </security-risks>
+      <cause-id>
+        <ref>hazardousCharactersNotSanitized</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="-5183918599840524032">
+      <severity>high</severity>
+      <severity-id>3</severity-id>
+      <cvss-score>9.7</cvss-score>
+      <cwe>89</cwe>
+      <issue-type>
+        <ref>attSqlInjectionChecks</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_52000</ref>
+      </remediation>
+      <advisory>
+        <ref>attSqlInjectionChecks</ref>
+      </advisory>
+      <threat-class>
+        <ref>catSQLInjection</ref>
+      </threat-class>
+      <entity>
+        <ref>6419376628788214784</ref>
+      </entity>
+      <url>
+        <ref>152564768</ref>
+      </url>
+      <security-risks>
+        <ref>databaseManipulations</ref>
+      </security-risks>
+      <cause-id>
+        <ref>hazardousCharactersNotSanitized</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="-1801652471464951552">
+      <severity>high</severity>
+      <severity-id>3</severity-id>
+      <cvss-score>7.5</cvss-score>
+      <cwe>79</cwe>
+      <issue-type>
+        <ref>attCrossSiteScripting</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_52000</ref>
+      </remediation>
+      <advisory>
+        <ref>attCrossSiteScripting</ref>
+      </advisory>
+      <threat-class>
+        <ref>catCrossSiteScripting</ref>
+      </threat-class>
+      <entity>
+        <ref>-48788606893636864</ref>
+      </entity>
+      <url>
+        <ref>865016179</ref>
+      </url>
+      <security-risks>
+        <ref>userImpersonation</ref>
+      </security-risks>
+      <cause-id>
+        <ref>hazardousCharactersNotSanitized</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="-4243831769092575744">
+      <severity>low</severity>
+      <severity-id>1</severity-id>
+      <cvss-score>5.0</cvss-score>
+      <cwe>200</cwe>
+      <issue-type>
+        <ref>ContentSecurityPolicy</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_61770</ref>
+      </remediation>
+      <advisory>
+        <ref>ContentSecurityPolicy</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <entity>
+        <ref>6209478585070946560</ref>
+      </entity>
+      <url>
+        <ref>-1327348091</ref>
+      </url>
+      <security-risks>
+        <ref>sensitiveInformation</ref>
+        <ref>phishing</ref>
+      </security-risks>
+      <cause-id>
+        <ref>insecureWebAppConfiguration</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="8596349941817911040">
+      <severity>low</severity>
+      <severity-id>1</severity-id>
+      <cvss-score>5.0</cvss-score>
+      <cwe>598</cwe>
+      <issue-type>
+        <ref>GETParamOverSSL</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_52720</ref>
+      </remediation>
+      <advisory>
+        <ref>GETParamOverSSL</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <entity>
+        <ref>-1380828253391506176</ref>
+      </entity>
+      <url>
+        <ref>-1327348091</ref>
+      </url>
+      <security-risks>
+        <ref>sensitiveNotOverSSL</ref>
+      </security-risks>
+      <cause-id>
+        <ref>GETParamOverSSL</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="-4766406546039233280">
+      <severity>low</severity>
+      <severity-id>1</severity-id>
+      <cvss-score>5.0</cvss-score>
+      <cwe>200</cwe>
+      <issue-type>
+        <ref>HSTS</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_61750</ref>
+      </remediation>
+      <advisory>
+        <ref>HSTS</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <entity>
+        <ref>-9037279660642156032</ref>
+      </entity>
+      <url>
+        <ref>865016179</ref>
+      </url>
+      <security-risks>
+        <ref>sensitiveInformation</ref>
+        <ref>phishing</ref>
+      </security-risks>
+      <cause-id>
+        <ref>insecureWebAppConfiguration</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="5732435150111188480">
+      <severity>medium</severity>
+      <severity-id>2</severity-id>
+      <cvss-score>6.4</cvss-score>
+      <cwe>74</cwe>
+      <issue-type>
+        <ref>attLinkInjection</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_52000</ref>
+      </remediation>
+      <advisory>
+        <ref>attLinkInjection</ref>
+      </advisory>
+      <threat-class>
+        <ref>catContentSpoofing</ref>
+      </threat-class>
+      <entity>
+        <ref>-1380828253391506176</ref>
+      </entity>
+      <url>
+        <ref>-1327348091</ref>
+      </url>
+      <security-risks>
+        <ref>phishing</ref>
+        <ref>userImpersonation</ref>
+        <ref>siteDefacement</ref>
+      </security-risks>
+      <cause-id>
+        <ref>hazardousCharactersNotSanitized</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="-6148566346742292224">
+      <severity>low</severity>
+      <severity-id>1</severity-id>
+      <cvss-score>5.0</cvss-score>
+      <cwe>200</cwe>
+      <issue-type>
+        <ref>ContentTypeOptions</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_61767</ref>
+      </remediation>
+      <advisory>
+        <ref>ContentTypeOptions</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <entity>
+        <ref>6209478585070946560</ref>
+      </entity>
+      <url>
+        <ref>-1327348091</ref>
+      </url>
+      <security-risks>
+        <ref>sensitiveInformation</ref>
+        <ref>phishing</ref>
+      </security-risks>
+      <cause-id>
+        <ref>insecureWebAppConfiguration</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="2556630726128612352">
+      <severity>high</severity>
+      <severity-id>3</severity-id>
+      <cvss-score>7.5</cvss-score>
+      <cwe>79</cwe>
+      <issue-type>
+        <ref>attCrossSiteScripting</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_52000</ref>
+      </remediation>
+      <advisory>
+        <ref>attCrossSiteScripting</ref>
+      </advisory>
+      <threat-class>
+        <ref>catCrossSiteScripting</ref>
+      </threat-class>
+      <entity>
+        <ref>-1380828253391506176</ref>
+      </entity>
+      <url>
+        <ref>-1327348091</ref>
+      </url>
+      <security-risks>
+        <ref>userImpersonation</ref>
+      </security-risks>
+      <cause-id>
+        <ref>hazardousCharactersNotSanitized</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="8446699866138242816">
+      <severity>low</severity>
+      <severity-id>1</severity-id>
+      <cvss-score>5.0</cvss-score>
+      <cwe>200</cwe>
+      <issue-type>
+        <ref>XSSProtectionHeader</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_61765</ref>
+      </remediation>
+      <advisory>
+        <ref>XSSProtectionHeader</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <entity>
+        <ref>6209478585070946560</ref>
+      </entity>
+      <url>
+        <ref>-1327348091</ref>
+      </url>
+      <security-risks>
+        <ref>sensitiveInformation</ref>
+        <ref>phishing</ref>
+      </security-risks>
+      <cause-id>
+        <ref>insecureWebAppConfiguration</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="-4048135782370073600">
+      <severity>low</severity>
+      <severity-id>1</severity-id>
+      <cvss-score>5.0</cvss-score>
+      <cwe>200</cwe>
+      <issue-type>
+        <ref>HSTS</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_61750</ref>
+      </remediation>
+      <advisory>
+        <ref>HSTS</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <entity>
+        <ref>6209478585070946560</ref>
+      </entity>
+      <url>
+        <ref>-1327348091</ref>
+      </url>
+      <security-risks>
+        <ref>sensitiveInformation</ref>
+        <ref>phishing</ref>
+      </security-risks>
+      <cause-id>
+        <ref>insecureWebAppConfiguration</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="1320830864677946112">
+      <severity>low</severity>
+      <severity-id>1</severity-id>
+      <cvss-score>5.0</cvss-score>
+      <cwe>525</cwe>
+      <issue-type>
+        <ref>attCachedSSL</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_60210</ref>
+      </remediation>
+      <advisory>
+        <ref>attCachedSSL</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <entity>
+        <ref>7790872231777554432</ref>
+      </entity>
+      <url>
+        <ref>1881781161</ref>
+      </url>
+      <security-risks>
+        <ref>sensitiveInformation</ref>
+      </security-risks>
+      <cause-id>
+        <ref>SensitiveCache</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="5531248792746929664">
+      <severity>low</severity>
+      <severity-id>1</severity-id>
+      <cvss-score>5.0</cvss-score>
+      <cwe>525</cwe>
+      <issue-type>
+        <ref>attCachedSSL</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_60210</ref>
+      </remediation>
+      <advisory>
+        <ref>attCachedSSL</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <entity>
+        <ref>-6556938534653437440</ref>
+      </entity>
+      <url>
+        <ref>152564768</ref>
+      </url>
+      <security-risks>
+        <ref>sensitiveInformation</ref>
+      </security-risks>
+      <cause-id>
+        <ref>SensitiveCache</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="8064181013484806400">
+      <severity>medium</severity>
+      <severity-id>2</severity-id>
+      <cvss-score>6.4</cvss-score>
+      <cwe>614</cwe>
+      <issue-type>
+        <ref>attRespCookieNotSecureSSL</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_52740</ref>
+      </remediation>
+      <advisory>
+        <ref>attRespCookieNotSecureSSL</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <entity>
+        <ref>3368242094631022080</ref>
+      </entity>
+      <url>
+        <ref>-1930822699</ref>
+      </url>
+      <security-risks>
+        <ref>unsecureCookieInSSL</ref>
+      </security-risks>
+      <cause-id>
+        <ref>nonSecureCookiesSentOverSSL</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="2543793912858784256">
+      <severity>medium</severity>
+      <severity-id>2</severity-id>
+      <cvss-score>6.4</cvss-score>
+      <cwe>614</cwe>
+      <issue-type>
+        <ref>attRespCookieNotSecureSSL</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_52740</ref>
+      </remediation>
+      <advisory>
+        <ref>attRespCookieNotSecureSSL</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <entity>
+        <ref>3621938430118430208</ref>
+      </entity>
+      <url>
+        <ref>-1930822699</ref>
+      </url>
+      <security-risks>
+        <ref>unsecureCookieInSSL</ref>
+      </security-risks>
+      <cause-id>
+        <ref>nonSecureCookiesSentOverSSL</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="-3820244492649182208">
+      <severity>medium</severity>
+      <severity-id>2</severity-id>
+      <cvss-score>6.4</cvss-score>
+      <cwe>79</cwe>
+      <issue-type>
+        <ref>phishingInFrames</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_52000</ref>
+      </remediation>
+      <advisory>
+        <ref>phishingInFrames</ref>
+      </advisory>
+      <threat-class>
+        <ref>catContentSpoofing</ref>
+      </threat-class>
+      <entity>
+        <ref>-1380828253391506176</ref>
+      </entity>
+      <url>
+        <ref>-1327348091</ref>
+      </url>
+      <security-risks>
+        <ref>phishing</ref>
+      </security-risks>
+      <cause-id>
+        <ref>hazardousCharactersNotSanitized</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="-3869191218833157888">
+      <severity>informational</severity>
+      <severity-id>0</severity-id>
+      <cvss-score>0.0</cvss-score>
+      <cwe>550</cwe>
+      <issue-type>
+        <ref>attUndefinedState</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_50300</ref>
+      </remediation>
+      <advisory>
+        <ref>attUndefinedState</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <entity>
+        <ref>6007566708901348352</ref>
+      </entity>
+      <url>
+        <ref>-663406796</ref>
+      </url>
+      <security-risks>
+        <ref>debugErrorInformation</ref>
+      </security-risks>
+      <cause-id>
+        <ref>boundsCheckingOnParamValues</ref>
+        <ref>incorrectDataType</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="-1623024880677765376">
+      <severity>low</severity>
+      <severity-id>1</severity-id>
+      <cvss-score>5.0</cvss-score>
+      <cwe>200</cwe>
+      <issue-type>
+        <ref>MicrosoftASPNETDebuggingEnabled</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_59140</ref>
+      </remediation>
+      <advisory>
+        <ref>MicrosoftASPNETDebuggingEnabled</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <entity>
+        <ref>-475768657331442688</ref>
+      </entity>
+      <url>
+        <ref>-1930822699</ref>
+      </url>
+      <security-risks>
+        <ref>sensitiveInformation</ref>
+      </security-risks>
+      <cause-id>
+        <ref>insecureWebAppConfiguration</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="8909542203049544960">
+      <severity>medium</severity>
+      <severity-id>2</severity-id>
+      <cvss-score>6.4</cvss-score>
+      <cwe>548</cwe>
+      <issue-type>
+        <ref>attDirectoryGuessing</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_50040</ref>
+      </remediation>
+      <advisory>
+        <ref>attDirectoryGuessing</ref>
+      </advisory>
+      <threat-class>
+        <ref>catDirectoryIndexing</ref>
+      </threat-class>
+      <entity>
+        <ref>-5531618266348311552</ref>
+      </entity>
+      <url>
+        <ref>-1334072098</ref>
+      </url>
+      <security-risks>
+        <ref>directoryListing</ref>
+      </security-risks>
+      <cause-id>
+        <ref>directoryBrowsingEnabled</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="4623585037861242368">
+      <severity>informational</severity>
+      <severity-id>0</severity-id>
+      <cvss-score>0.0</cvss-score>
+      <cwe>550</cwe>
+      <issue-type>
+        <ref>attUndefinedState</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_50300</ref>
+      </remediation>
+      <advisory>
+        <ref>attUndefinedState</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <entity>
+        <ref>7553320665850814720</ref>
+      </entity>
+      <url>
+        <ref>152564768</ref>
+      </url>
+      <security-risks>
+        <ref>debugErrorInformation</ref>
+      </security-risks>
+      <cause-id>
+        <ref>boundsCheckingOnParamValues</ref>
+        <ref>incorrectDataType</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="-1946141193786294528">
+      <severity>medium</severity>
+      <severity-id>2</severity-id>
+      <cvss-score>6.4</cvss-score>
+      <cwe>79</cwe>
+      <issue-type>
+        <ref>phishingInFrames</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_52000</ref>
+      </remediation>
+      <advisory>
+        <ref>phishingInFrames</ref>
+      </advisory>
+      <threat-class>
+        <ref>catContentSpoofing</ref>
+      </threat-class>
+      <entity>
+        <ref>-4784596934833808640</ref>
+      </entity>
+      <url>
+        <ref>-663406796</ref>
+      </url>
+      <security-risks>
+        <ref>phishing</ref>
+      </security-risks>
+      <cause-id>
+        <ref>hazardousCharactersNotSanitized</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="5458692317364518400">
+      <severity>low</severity>
+      <severity-id>1</severity-id>
+      <cvss-score>5.0</cvss-score>
+      <cwe>200</cwe>
+      <issue-type>
+        <ref>MicrosoftASPNETDebuggingEnabled</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_59140</ref>
+      </remediation>
+      <advisory>
+        <ref>MicrosoftASPNETDebuggingEnabled</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <entity>
+        <ref>-475768657331442688</ref>
+      </entity>
+      <url>
+        <ref>-1334072098</ref>
+      </url>
+      <security-risks>
+        <ref>sensitiveInformation</ref>
+      </security-risks>
+      <cause-id>
+        <ref>insecureWebAppConfiguration</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="-6727182770286488320">
+      <severity>low</severity>
+      <severity-id>1</severity-id>
+      <cvss-score>5.0</cvss-score>
+      <cwe>598</cwe>
+      <issue-type>
+        <ref>GETParamOverSSL</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_52720</ref>
+      </remediation>
+      <advisory>
+        <ref>GETParamOverSSL</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <entity>
+        <ref>-2105342084864231680</ref>
+      </entity>
+      <url>
+        <ref>1881781161</ref>
+      </url>
+      <security-risks>
+        <ref>sensitiveNotOverSSL</ref>
+      </security-risks>
+      <cause-id>
+        <ref>GETParamOverSSL</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="1756127640557061888">
+      <severity>low</severity>
+      <severity-id>1</severity-id>
+      <cvss-score>5.0</cvss-score>
+      <cwe>311</cwe>
+      <issue-type>
+        <ref>attHttpsToHttp</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_52721</ref>
+      </remediation>
+      <advisory>
+        <ref>attHttpsToHttp</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <entity>
+        <ref>-6556938534653437440</ref>
+      </entity>
+      <url>
+        <ref>152564768</ref>
+      </url>
+      <security-risks>
+        <ref>sensitiveNotOverSSL</ref>
+      </security-risks>
+      <cause-id>
+        <ref>sensitiveDataNotSSL</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="725933839204263936">
+      <severity>high</severity>
+      <severity-id>3</severity-id>
+      <cvss-score>7.5</cvss-score>
+      <cwe>79</cwe>
+      <issue-type>
+        <ref>attCrossSiteScripting</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_52000</ref>
+      </remediation>
+      <advisory>
+        <ref>attCrossSiteScripting</ref>
+      </advisory>
+      <threat-class>
+        <ref>catCrossSiteScripting</ref>
+      </threat-class>
+      <entity>
+        <ref>-4784596934833808640</ref>
+      </entity>
+      <url>
+        <ref>-663406796</ref>
+      </url>
+      <security-risks>
+        <ref>userImpersonation</ref>
+      </security-risks>
+      <cause-id>
+        <ref>hazardousCharactersNotSanitized</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="1212344530761567488">
+      <severity>informational</severity>
+      <severity-id>0</severity-id>
+      <cvss-score>0.0</cvss-score>
+      <cwe>550</cwe>
+      <issue-type>
+        <ref>attUndefinedState</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_50300</ref>
+      </remediation>
+      <advisory>
+        <ref>attUndefinedState</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <entity>
+        <ref>6419376628788214784</ref>
+      </entity>
+      <url>
+        <ref>152564768</ref>
+      </url>
+      <security-risks>
+        <ref>debugErrorInformation</ref>
+      </security-risks>
+      <cause-id>
+        <ref>boundsCheckingOnParamValues</ref>
+        <ref>incorrectDataType</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="-8895801990045380352">
+      <severity>low</severity>
+      <severity-id>1</severity-id>
+      <cvss-score>5.0</cvss-score>
+      <cwe>311</cwe>
+      <issue-type>
+        <ref>attHttpsToHttp</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_52721</ref>
+      </remediation>
+      <advisory>
+        <ref>attHttpsToHttp</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <entity>
+        <ref>1733046179033861888</ref>
+      </entity>
+      <url>
+        <ref>-1930822699</ref>
+      </url>
+      <security-risks>
+        <ref>sensitiveNotOverSSL</ref>
+      </security-risks>
+      <cause-id>
+        <ref>sensitiveDataNotSSL</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="-4825179098078044160">
+      <severity>low</severity>
+      <severity-id>1</severity-id>
+      <cvss-score>5.0</cvss-score>
+      <cwe>311</cwe>
+      <issue-type>
+        <ref>attHttpsToHttp</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_52721</ref>
+      </remediation>
+      <advisory>
+        <ref>attHttpsToHttp</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <entity>
+        <ref>7790872231777554432</ref>
+      </entity>
+      <url>
+        <ref>1881781161</ref>
+      </url>
+      <security-risks>
+        <ref>sensitiveNotOverSSL</ref>
+      </security-risks>
+      <cause-id>
+        <ref>sensitiveDataNotSSL</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="2350282551005794816">
+      <severity>medium</severity>
+      <severity-id>2</severity-id>
+      <cvss-score>6.4</cvss-score>
+      <cwe>74</cwe>
+      <issue-type>
+        <ref>attLinkInjection</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_52000</ref>
+      </remediation>
+      <advisory>
+        <ref>attLinkInjection</ref>
+      </advisory>
+      <threat-class>
+        <ref>catContentSpoofing</ref>
+      </threat-class>
+      <entity>
+        <ref>-4784596934833808640</ref>
+      </entity>
+      <url>
+        <ref>-663406796</ref>
+      </url>
+      <security-risks>
+        <ref>phishing</ref>
+        <ref>userImpersonation</ref>
+        <ref>siteDefacement</ref>
+      </security-risks>
+      <cause-id>
+        <ref>hazardousCharactersNotSanitized</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="1795326943221382400">
+      <severity>low</severity>
+      <severity-id>1</severity-id>
+      <cvss-score>5.0</cvss-score>
+      <cwe>209</cwe>
+      <issue-type>
+        <ref>GV_SQLErr</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_52000</ref>
+      </remediation>
+      <advisory>
+        <ref>GV_SQLErr</ref>
+      </advisory>
+      <threat-class>
+        <ref>catSQLInjection</ref>
+      </threat-class>
+      <entity>
+        <ref>-3263235908683142656</ref>
+      </entity>
+      <url>
+        <ref>152564768</ref>
+      </url>
+      <security-risks>
+        <ref>databaseManipulations</ref>
+      </security-risks>
+      <cause-id>
+        <ref>hazardousCharactersNotSanitized</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="2578205373672461568">
+      <severity>low</severity>
+      <severity-id>1</severity-id>
+      <cvss-score>5.0</cvss-score>
+      <cwe>598</cwe>
+      <issue-type>
+        <ref>GETParamOverSSL</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_52720</ref>
+      </remediation>
+      <advisory>
+        <ref>GETParamOverSSL</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <entity>
+        <ref>5415789320716974080</ref>
+      </entity>
+      <url>
+        <ref>1864287795</ref>
+      </url>
+      <security-risks>
+        <ref>sensitiveNotOverSSL</ref>
+      </security-risks>
+      <cause-id>
+        <ref>GETParamOverSSL</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="-3375235133658843136">
+      <severity>low</severity>
+      <severity-id>1</severity-id>
+      <cvss-score>5.0</cvss-score>
+      <cwe>311</cwe>
+      <issue-type>
+        <ref>attHttpsToHttp</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_52721</ref>
+      </remediation>
+      <advisory>
+        <ref>attHttpsToHttp</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <entity>
+        <ref>6209478585070946560</ref>
+      </entity>
+      <url>
+        <ref>-1327348091</ref>
+      </url>
+      <security-risks>
+        <ref>sensitiveNotOverSSL</ref>
+      </security-risks>
+      <cause-id>
+        <ref>sensitiveDataNotSSL</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="-3331737328673875968">
+      <severity>low</severity>
+      <severity-id>1</severity-id>
+      <cvss-score>5.0</cvss-score>
+      <cwe>311</cwe>
+      <issue-type>
+        <ref>attHttpsToHttp</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_52721</ref>
+      </remediation>
+      <advisory>
+        <ref>attHttpsToHttp</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <entity>
+        <ref>-7017794822322744576</ref>
+      </entity>
+      <url>
+        <ref>-598681142</ref>
+      </url>
+      <security-risks>
+        <ref>sensitiveNotOverSSL</ref>
+      </security-risks>
+      <cause-id>
+        <ref>sensitiveDataNotSSL</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="1503585337596061440">
+      <severity>informational</severity>
+      <severity-id>0</severity-id>
+      <cvss-score>0.0</cvss-score>
+      <cwe>531</cwe>
+      <issue-type>
+        <ref>ApplicationTestScriptDetected</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_54850</ref>
+      </remediation>
+      <advisory>
+        <ref>ApplicationTestScriptDetected</ref>
+      </advisory>
+      <threat-class>
+        <ref>catPredictableResourceLocation</ref>
+      </threat-class>
+      <entity>
+        <ref>-4667057445911271424</ref>
+      </entity>
+      <url>
+        <ref>-1930822699</ref>
+      </url>
+      <security-risks>
+        <ref>tempScriptDownload</ref>
+      </security-risks>
+      <cause-id>
+        <ref>tempFilesLeftBehind</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="-9102903005353918208">
+      <severity>informational</severity>
+      <severity-id>0</severity-id>
+      <cvss-score>0.0</cvss-score>
+      <cwe>359</cwe>
+      <issue-type>
+        <ref>GD_EmailAddress</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_60260</ref>
+      </remediation>
+      <advisory>
+        <ref>GD_EmailAddress</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <entity>
+        <ref>-4851142276775634944</ref>
+      </entity>
+      <url>
+        <ref>1972102009</ref>
+      </url>
+      <security-risks>
+        <ref>sensitiveInformation</ref>
+      </security-risks>
+      <cause-id>
+        <ref>insecureWebAppConfiguration</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="-1323721631045286656">
+      <severity>medium</severity>
+      <severity-id>2</severity-id>
+      <cvss-score>6.4</cvss-score>
+      <cwe>614</cwe>
+      <issue-type>
+        <ref>attRespCookieNotSecureSSL</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_52740</ref>
+      </remediation>
+      <advisory>
+        <ref>attRespCookieNotSecureSSL</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <entity>
+        <ref>-2224149398862580480</ref>
+      </entity>
+      <url>
+        <ref>-884795396</ref>
+      </url>
+      <security-risks>
+        <ref>unsecureCookieInSSL</ref>
+      </security-risks>
+      <cause-id>
+        <ref>nonSecureCookiesSentOverSSL</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="-6849684973710713088">
+      <severity>low</severity>
+      <severity-id>1</severity-id>
+      <cvss-score>5.0</cvss-score>
+      <cwe>598</cwe>
+      <issue-type>
+        <ref>GETParamOverSSL</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_52720</ref>
+      </remediation>
+      <advisory>
+        <ref>GETParamOverSSL</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <entity>
+        <ref>-1127005671876230656</ref>
+      </entity>
+      <url>
+        <ref>-873381515</ref>
+      </url>
+      <security-risks>
+        <ref>sensitiveNotOverSSL</ref>
+      </security-risks>
+      <cause-id>
+        <ref>GETParamOverSSL</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="6712657021855651584">
+      <severity>informational</severity>
+      <severity-id>0</severity-id>
+      <cvss-score>0.0</cvss-score>
+      <cwe>615</cwe>
+      <issue-type>
+        <ref>attSensitiveInHtmlComments</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_50750</ref>
+      </remediation>
+      <advisory>
+        <ref>attSensitiveInHtmlComments</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <entity>
+        <ref>5278201610254473472</ref>
+      </entity>
+      <url>
+        <ref>152564768</ref>
+      </url>
+      <security-risks>
+        <ref>sensitiveInformation</ref>
+      </security-risks>
+      <cause-id>
+        <ref>debugInfoInHtmlSource</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="-8225961094327705600">
+      <severity>low</severity>
+      <severity-id>1</severity-id>
+      <cvss-score>5.0</cvss-score>
+      <cwe>200</cwe>
+      <issue-type>
+        <ref>attDirectoryFound</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_50330</ref>
+      </remediation>
+      <advisory>
+        <ref>attDirectoryFound</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <entity>
+        <ref>7377374452332514560</ref>
+      </entity>
+      <url>
+        <ref>633681243</ref>
+      </url>
+      <security-risks>
+        <ref>siteStructureRevealed</ref>
+      </security-risks>
+      <cause-id>
+        <ref>insecureWebServerConfiguration</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="-4497309238025911808">
+      <severity>low</severity>
+      <severity-id>1</severity-id>
+      <cvss-score>5.0</cvss-score>
+      <cwe>525</cwe>
+      <issue-type>
+        <ref>attCachedSSL</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_60210</ref>
+      </remediation>
+      <advisory>
+        <ref>attCachedSSL</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <entity>
+        <ref>1802701103716408576</ref>
+      </entity>
+      <url>
+        <ref>-873381515</ref>
+      </url>
+      <security-risks>
+        <ref>sensitiveInformation</ref>
+      </security-risks>
+      <cause-id>
+        <ref>SensitiveCache</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="5350658660580025344">
+      <severity>low</severity>
+      <severity-id>1</severity-id>
+      <cvss-score>5.0</cvss-score>
+      <cwe>598</cwe>
+      <issue-type>
+        <ref>GETParamOverSSL</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_52720</ref>
+      </remediation>
+      <advisory>
+        <ref>GETParamOverSSL</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <entity>
+        <ref>-5235018227160123648</ref>
+      </entity>
+      <url>
+        <ref>-873381515</ref>
+      </url>
+      <security-risks>
+        <ref>sensitiveNotOverSSL</ref>
+      </security-risks>
+      <cause-id>
+        <ref>GETParamOverSSL</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="4764631424953005568">
+      <severity>low</severity>
+      <severity-id>1</severity-id>
+      <cvss-score>5.0</cvss-score>
+      <cwe>200</cwe>
+      <issue-type>
+        <ref>attDirectoryFound</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_50330</ref>
+      </remediation>
+      <advisory>
+        <ref>attDirectoryFound</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <entity>
+        <ref>-6439222625986481408</ref>
+      </entity>
+      <url>
+        <ref>185805297</ref>
+      </url>
+      <security-risks>
+        <ref>siteStructureRevealed</ref>
+      </security-risks>
+      <cause-id>
+        <ref>insecureWebServerConfiguration</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="-1118144183282358528">
+      <severity>low</severity>
+      <severity-id>1</severity-id>
+      <cvss-score>5.0</cvss-score>
+      <cwe>548</cwe>
+      <issue-type>
+        <ref>GD_DirListing</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_50040</ref>
+      </remediation>
+      <advisory>
+        <ref>GD_DirListing</ref>
+      </advisory>
+      <threat-class>
+        <ref>catDirectoryIndexing</ref>
+      </threat-class>
+      <entity>
+        <ref>1733046179033861888</ref>
+      </entity>
+      <url>
+        <ref>-1334072098</ref>
+      </url>
+      <security-risks>
+        <ref>directoryListing</ref>
+      </security-risks>
+      <cause-id>
+        <ref>directoryBrowsingEnabled</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="-3994679908759852544">
+      <severity>low</severity>
+      <severity-id>1</severity-id>
+      <cvss-score>5.0</cvss-score>
+      <cwe>200</cwe>
+      <issue-type>
+        <ref>attDirectoryFound</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_50330</ref>
+      </remediation>
+      <advisory>
+        <ref>attDirectoryFound</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <entity>
+        <ref>-2152749394628497664</ref>
+      </entity>
+      <url>
+        <ref>1605495909</ref>
+      </url>
+      <security-risks>
+        <ref>siteStructureRevealed</ref>
+      </security-risks>
+      <cause-id>
+        <ref>insecureWebServerConfiguration</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="8522925592869944064">
+      <severity>low</severity>
+      <severity-id>1</severity-id>
+      <cvss-score>5.0</cvss-score>
+      <cwe>525</cwe>
+      <issue-type>
+        <ref>attCachedSSL</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_60210</ref>
+      </remediation>
+      <advisory>
+        <ref>attCachedSSL</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <entity>
+        <ref>1489563157205927168</ref>
+      </entity>
+      <url>
+        <ref>-915214513</ref>
+      </url>
+      <security-risks>
+        <ref>sensitiveInformation</ref>
+      </security-risks>
+      <cause-id>
+        <ref>SensitiveCache</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="-9011558056474610688">
+      <severity>low</severity>
+      <severity-id>1</severity-id>
+      <cvss-score>5.0</cvss-score>
+      <cwe>525</cwe>
+      <issue-type>
+        <ref>attCachedSSL</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_60210</ref>
+      </remediation>
+      <advisory>
+        <ref>attCachedSSL</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <entity>
+        <ref>-3194683530452521984</ref>
+      </entity>
+      <url>
+        <ref>-1392276445</ref>
+      </url>
+      <security-risks>
+        <ref>sensitiveInformation</ref>
+      </security-risks>
+      <cause-id>
+        <ref>SensitiveCache</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="9219900522019247104">
+      <severity>low</severity>
+      <severity-id>1</severity-id>
+      <cvss-score>5.0</cvss-score>
+      <cwe>525</cwe>
+      <issue-type>
+        <ref>attCachedSSL</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_60210</ref>
+      </remediation>
+      <advisory>
+        <ref>attCachedSSL</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <entity>
+        <ref>7921848921908846848</ref>
+      </entity>
+      <url>
+        <ref>1977421793</ref>
+      </url>
+      <security-risks>
+        <ref>sensitiveInformation</ref>
+      </security-risks>
+      <cause-id>
+        <ref>SensitiveCache</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="3921948723804062976">
+      <severity>low</severity>
+      <severity-id>1</severity-id>
+      <cvss-score>5.0</cvss-score>
+      <cwe>525</cwe>
+      <issue-type>
+        <ref>attCachedSSL</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_60210</ref>
+      </remediation>
+      <advisory>
+        <ref>attCachedSSL</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <entity>
+        <ref>-908815709327284224</ref>
+      </entity>
+      <url>
+        <ref>-1214398044</ref>
+      </url>
+      <security-risks>
+        <ref>sensitiveInformation</ref>
+      </security-risks>
+      <cause-id>
+        <ref>SensitiveCache</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+    <item id="-7939798367161410048">
+      <severity>informational</severity>
+      <severity-id>0</severity-id>
+      <cvss-score>0.0</cvss-score>
+      <cwe>550</cwe>
+      <issue-type>
+        <ref>attUndefinedState</ref>
+      </issue-type>
+      <remediation>
+        <ref>fix_50300</ref>
+      </remediation>
+      <advisory>
+        <ref>attUndefinedState</ref>
+      </advisory>
+      <threat-class>
+        <ref>catInformationLeakage</ref>
+      </threat-class>
+      <entity>
+        <ref>-5235018227160123648</ref>
+      </entity>
+      <url>
+        <ref>-873381515</ref>
+      </url>
+      <security-risks>
+        <ref>debugErrorInformation</ref>
+      </security-risks>
+      <cause-id>
+        <ref>boundsCheckingOnParamValues</ref>
+        <ref>incorrectDataType</ref>
+      </cause-id>
+      <user-image-group />
+      <variant-group />
+    </item>
+  </issue-group>
+  <security-risk-group maxIssuesByRisk="37">
+    <item id="userImpersonation">ハッカーが正規のユーザーになりすまし、ユーザーのレコードを表示または改変したり、ユーザーとしてトランザクションを実行するのに使用することができる、カスタマー・セッションおよび Cookie を盗み出したり操作することができる可能性があります</item>
+    <item id="databaseManipulations">データベース・エントリーおよびテーブルを表示、改変または削除することができます</item>
+    <item id="sensitiveInformation">ユーザー名、パスワード、マシン名などの Web アプリケーションに関する秘密情報や、秘密のファイルの場所などの情報を取得することができます</item>
+    <item id="directoryListing">制限のかけられたファイルを含む可能性のある Web アプリケーションの仮想ディレクトリーの内容を、表示およびダウンロードすることができます</item>
+    <item id="phishing">知識の乏しいユーザーに、ユーザー名、パスワード、クレジット・カード番号、社会保険番号などの秘密情報を提供するように求めることができます</item>
+    <item id="siteDefacement">Web サーバー上の Web ページ、スクリプトおよびファイルをアップロード、改変または削除することができます</item>
+    <item id="unsecureCookieInSSL">暗号化されたセッション中に送信されたユーザーおよびセッション情報 (Cookie) を盗み出せる可能性があります</item>
+    <item id="sensitiveNotOverSSL">暗号化されずに送信されているクレジット・カード番号、社会保険番号などの秘密のデータを盗み出せる可能性があります</item>
+    <item id="authBypass">Web アプリケーションの認証メカニズムをバイパスできる可能性があります</item>
+    <item id="siteStructureRevealed">攻撃者が Web サイトをマップするのに利用できるサイトのファイル・システム構造についての情報を取得することができます</item>
+    <item id="debugErrorInformation">秘密のデバッグ情報を収集することができます</item>
+    <item id="tempScriptDownload">アプリケーション・ロジック、およびユーザー名やパスワードなどのその他の秘密情報を公開する可能性のある一時スクリプト・ファイルをダウンロードできます</item>
+    <item id="pathDisclosure">攻撃者がさらなる攻撃を展開し、Web アプリケーションのファイル・システム構造についての情報を取得するのに役立つ可能性のある Web サーバーのインストールの絶対パスが取得できます</item>
+  </security-risk-group>
+  <visited-link-group>
+    <total>26</total>
+    <item>
+      <url>https://demo.testfire.net/?mode=demo</url>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/search.aspx?txtSearch=1234</url>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/default.aspx</url>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/bank/login.aspx</url>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/default.aspx?content=inside_contact.htm</url>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/feedback.aspx</url>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/comment.aspx</url>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/disclaimer.htm?url=http://www.netscape.com</url>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/bank/?mode=demo</url>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/bank/</url>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/bank/main.aspx</url>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/bank/servererror.aspx</url>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/bank/ws.asmx?WSDL</url>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/bank/account.aspx</url>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/bank/ws.asmx?op=GetUserAccounts</url>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/bank/logout.aspx</url>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/bank/mozxpath.js</url>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/bank/transaction.aspx</url>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/bank/ws.asmx</url>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/bank/mozxpath.js</url>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/bank/transaction.aspx</url>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/survey_questions.aspx</url>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/retirement.htm</url>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/survey_questions.aspx?step=a</url>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/high_yield_investments.htm</url>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/bank/login.aspx</url>
+    </item>
+  </visited-link-group>
+  <unique-visited-link-group>
+    <max-issues-in-url>15</max-issues-in-url>
+    <item>
+      <url>https://demo.testfire.net/?mode=demo</url>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/bank/</url>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/bank/?mode=demo</url>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/bank/account.aspx</url>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/bank/login.aspx</url>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/bank/logout.aspx</url>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/bank/main.aspx</url>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/bank/mozxpath.js</url>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/bank/servererror.aspx</url>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/bank/transaction.aspx</url>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/bank/ws.asmx</url>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/bank/ws.asmx?op=GetUserAccounts</url>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/bank/ws.asmx?WSDL</url>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/comment.aspx</url>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/default.aspx</url>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/default.aspx?content=inside_contact.htm</url>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/disclaimer.htm?url=http://www.netscape.com</url>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/feedback.aspx</url>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/high_yield_investments.htm</url>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/retirement.htm</url>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/search.aspx?txtSearch=1234</url>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/survey_questions.aspx</url>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/survey_questions.aspx?step=a</url>
+    </item>
+  </unique-visited-link-group>
+  <broken-link-group>
+    <total>35</total>
+    <item>
+      <url>https://demo.testfire.net/images/?mode=demo</url>
+      <reason>クライアント側の証明書エラー</reason>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/admin/?mode=demo</url>
+      <reason>クライアント側の証明書エラー</reason>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/static/?mode=demo</url>
+      <reason>クライアント側の証明書エラー</reason>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/bank/account.aspx.cs</url>
+      <reason>応答状態 '404' - 見つからない</reason>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/bank/apply.aspx.cs</url>
+      <reason>応答状態 '404' - 見つからない</reason>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/bank/bank.master</url>
+      <reason>応答状態 '404' - 見つからない</reason>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/bank/bank.master.cs</url>
+      <reason>応答状態 '404' - 見つからない</reason>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/bank/customize.aspx</url>
+      <reason>応答状態 '500' - 内部サーバー・エラー</reason>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/bank/customize.aspx.cs</url>
+      <reason>応答状態 '404' - 見つからない</reason>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/bank/queryxpath.aspx.cs</url>
+      <reason>応答状態 '404' - 見つからない</reason>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/bank/transfer.aspx.cs</url>
+      <reason>応答状態 '404' - 見つからない</reason>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/bank/account.aspx.cs</url>
+      <reason>応答状態 '404' - 見つからない</reason>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/bank/bank.master.cs</url>
+      <reason>応答状態 '404' - 見つからない</reason>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/bank/20060308_bak/</url>
+      <reason>クライアント側の証明書エラー</reason>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/bank/transfer.aspx.cs</url>
+      <reason>応答状態 '404' - 見つからない</reason>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/bank/login.aspx.cs</url>
+      <reason>応答状態 '404' - 見つからない</reason>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/bank/logout.aspx.cs</url>
+      <reason>応答状態 '404' - 見つからない</reason>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/bank/main.aspx.cs</url>
+      <reason>応答状態 '404' - 見つからない</reason>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/bank/queryxpath.aspx</url>
+      <reason>応答状態 '500' - 内部サーバー・エラー</reason>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/bank/transaction.aspx.cs</url>
+      <reason>応答状態 '404' - 見つからない</reason>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/bank/20060308_bak/</url>
+      <reason>クライアント側の証明書エラー</reason>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/bank/apply.aspx.cs</url>
+      <reason>応答状態 '404' - 見つからない</reason>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/bank/bank.master</url>
+      <reason>応答状態 '404' - 見つからない</reason>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/bank/customize.aspx</url>
+      <reason>応答状態 '500' - 内部サーバー・エラー</reason>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/bank/customize.aspx.cs</url>
+      <reason>応答状態 '404' - 見つからない</reason>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/bank/login.aspx.cs</url>
+      <reason>応答状態 '404' - 見つからない</reason>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/bank/logout.aspx.cs</url>
+      <reason>応答状態 '404' - 見つからない</reason>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/bank/main.aspx.cs</url>
+      <reason>応答状態 '404' - 見つからない</reason>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/bank/queryxpath.aspx</url>
+      <reason>応答状態 '500' - 内部サーバー・エラー</reason>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/bank/queryxpath.aspx.cs</url>
+      <reason>応答状態 '404' - 見つからない</reason>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/security.htm</url>
+      <reason>応答状態 '404' - 見つからない</reason>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/inside_points_of_interest.htm</url>
+      <reason>応答状態 '404' - 見つからない</reason>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/Privacypolicy.aspx?sec=Careers&amp;template=US</url>
+      <reason>応答状態 '404' - 見つからない</reason>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/notfound.aspx?aspxerrorpath=/Privacypolicy.aspx</url>
+      <reason>応答状態 '404' - 見つからない</reason>
+    </item>
+    <item>
+      <url>https://demo.testfire.net/bank/transaction.aspx.cs</url>
+      <reason>応答状態 '404' - 見つからない</reason>
+    </item>
+  </broken-link-group>
+</xml-report>
