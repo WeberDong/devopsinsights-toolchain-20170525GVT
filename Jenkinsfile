@@ -163,7 +163,7 @@ pipeline {
         stage('ゲート') {
             steps {
                 // use "evaluateGate" method to leverage IBM Cloud DevOps gate
-                evaluateGate policy: 'Weather App Policy', forceDecision: 'true'
+                evaluateGate policy: 'Weather App Policy GVT', forceDecision: 'true'
          // evaluateGate policy: '天気予報アプリポリシー①', forceDecision: 'true'
             }
         }
