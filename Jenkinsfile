@@ -19,9 +19,9 @@ pipeline {
         IBM_CLOUD_DEVOPS_TOOLCHAIN_ID = '6bc113bb-5331-493c-8da1-45631fc33adf'
         IBM_CLOUD_DEVOPS_WEBHOOK_URL = 'https://jenkins:f761d3a3-b620-45a6-9e15-d4a52a4eb211:b8e4b101-cacd-4997-bdac-1a62047f7cec@devops-api-integration.stage1.ng.bluemix.net/v1/toolint/messaging/webhook/publish'
     }
- //   tools {
-  //      nodejs 'recent'
-  //  }
+    tools {
+       nodejs 'recent'
+   }
     stages {
         stage('ビルド') {
             environment {
