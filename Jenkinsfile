@@ -7,7 +7,9 @@
     for the build/test/deploy stage and the gate 
  */
 pipeline {
-    agent any
+    agent {
+        label env.DEFAULT_JENKINS_AGENT
+    }
     environment {
         // You need to specify 4 required environment variables first, they are going to be used for the following IBM Cloud DevOps steps
        // IBM_CLOUD_DEVOPS_CREDS = credentials('BM_CRED')
