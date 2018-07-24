@@ -99,18 +99,18 @@ pipeline {
                 }
              }
         }
-                stage('Security scan') {
-            steps {
-             sh 'echo '
-            }
-            // post build section to use "publishTestResult" method to publish test result
-            post {
-                always {
-                    publishTestResult type:'staticsecurityscan', fileLocation: './tests/saoc/gvt_2018-01-24_17-55-02.xml'
-                    publishTestResult type:'dynamicsecurityscan', fileLocation: './tests/saoc/gvt_2018-01-24_16-46-00.xml'
-                }
-            }
-        }
+      //          stage('Security scan') {
+       //     steps {
+        //     sh 'echo '
+         //   }
+                 // post build section to use "publishTestResult" method to publish test result
+        //    post {
+         //       always {
+          //          publishTestResult type:'staticsecurityscan', fileLocation: './tests/saoc/gvt_2018-01-24_17-55-02.xml'
+           //         publishTestResult type:'dynamicsecurityscan', fileLocation: './tests/saoc/gvt_2018-01-24_16-46-00.xml'
+            //    }
+        //    }
+       // }
         stage('ステージングにデプロイ') {
             steps {
                 // Push the Weather App to Bluemix, staging space
